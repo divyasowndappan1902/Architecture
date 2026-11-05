@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHITECTURE PRIME — Luxury Architecture &amp; Bespoke Interior Studio</title>
+  <meta name="description" content="Architecture Prime is an internationally renowned luxury architectural atelier crafting avant-garde residential villas, landmark commercial headquarters, and curated spatial interiors.">
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Architectural Page Preloader -->
+  <div class="site-preloader" id="pagePreloader" aria-hidden="true">
+    <div class="preloader-grid-lines">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="preloader-inner">
+      <div class="preloader-brand-wrap">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="preloader-logo">
+      </div>
+      <div class="preloader-tagline">STACKLY ATELIER &bull; SPATIAL ENGINEERING</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-meta">
+        <span class="preloader-status">CALIBRATING SPATIAL GEOMETRY</span>
+        <span class="preloader-counter" id="preloaderCounter">00%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo ARCHITECTURE PRIME -->
+      <a href="index.html" class="site-logo" aria-label="Stackly Architecture">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-desktop">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Extreme Right Actions -->
+      <div class="header-actions">
+        <a href="login.html" class="btn-header-login">
+          <i class="fas fa-user-shield"></i>
+          <span>Client Portal</span>
+        </a>
+
+        <!-- Responsive Hamburger Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">
+        <span>Home</span>
+        <span class="link-index">01</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <span>About</span>
+        <span class="link-index">02</span>
+      </a>
+      <a href="services.html" class="mobile-nav-link">
+        <span>Services</span>
+        <span class="link-index">03</span>
+      </a>
+      <a href="blog.html" class="mobile-nav-link">
+        <span>Blog</span>
+        <span class="link-index">04</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <span>Contact</span>
+        <span class="link-index">05</span>
+      </a>
+      <a href="login.html" class="mobile-nav-link">
+        <span>Client Login</span>
+        <span class="link-index">06</span>
+      </a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (800) 492-8820</span>
+      </div>
+      <div class="mobile-contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>concierge@architectureprime.com</span>
+      </div>
+      <div class="mobile-nav-socials">
+        <a href="404.html" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="404.html" class="social-circle" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="404.html" class="social-circle" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        <a href="404.html" class="social-circle" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 1: FULL-SCREEN LUXURY ARCHITECTURE HERO SLIDER
+         =================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-background" id="heroSliderBgs">
+        <div class="hero-slide-bg active" data-slide="0">
+          <img src="assets/project-horizon-villa.webp" 
+               alt="The Horizon White Luxury Villa by Architecture Prime" 
+               class="hero-bg-img">
+        </div>
+        <div class="hero-slide-bg" data-slide="1">
+          <img src="assets/service-landscape.webp" 
+               alt="Modern White Poolside Villa by Architecture Prime" 
+               class="hero-bg-img">
+        </div>
+        <div class="hero-slide-bg" data-slide="2">
+          <img src="assets/hero-villa.webp" 
+               alt="Modern Luxury Cantilever Villa by Architecture Prime" 
+               class="hero-bg-img">
+        </div>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge" id="heroSlideBadge">
+            <i class="fas fa-crown"></i>
+            <span>Architecture &amp; Interiors Crafted With Precision</span>
+          </div>
+          
+          <h1 class="hero-title" id="heroSlideTitle">
+            Designing Spaces That <span class="title-accent">Inspire</span> Everyday Living
+          </h1>
+          
+          <p class="hero-lead" id="heroSlideLead">
+            We bridge monolithic purity with sensory intimacy. Architecture Prime conceptualizes high-end bespoke residences, avant-garde commercial headquarters, and tranquil living environments.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="404.html" class="btn btn-accent">
+              <span>Explore Projects</span>
+              <div class="btn-icon-circle"><i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="404.html" class="btn btn-outline-light">
+              <span>Schedule Consultation</span>
+            </a>
+          </div>
+
+          <!-- Hero Slider Navigation & Progress Dock -->
+          <div class="hero-slider-dock">
+            <div class="hero-slider-Counter-group">
+              <button type="button" class="hero-slide-dot active" data-slide="0" aria-label="Slide 01">
+                <span class="dot-num">01</span>
+                <span class="dot-label">Villa Aurelia</span>
+              </button>
+              <button type="button" class="hero-slide-dot" data-slide="1" aria-label="Slide 02">
+                <span class="dot-num">02</span>
+                <span class="dot-label">Horizon Villa</span>
+              </button>
+              <button type="button" class="hero-slide-dot" data-slide="2" aria-label="Slide 03">
+                <span class="dot-num">03</span>
+                <span class="dot-label">Lumina Pavilion</span>
+              </button>
+            </div>
+
+            <div class="hero-slider-progress-wrap">
+              <div class="hero-slider-progress-bar" id="heroSlideProgress"></div>
+            </div>
+
+            <div class="hero-slider-arrows">
+              <button type="button" class="hero-slider-arrow" id="heroSlidePrev" aria-label="Previous Hero Slide">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <button type="button" class="hero-slider-arrow" id="heroSlideNext" aria-label="Next Hero Slide">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Statistics Strip -->
+          <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+              <span class="hero-meta-number"><span class="counter-val" data-target="24">0</span><span class="counter-suffix">+</span></span>
+              <span class="hero-meta-label">International Honors</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-number"><span class="counter-val" data-target="150">0</span><span class="counter-suffix">+</span></span>
+              <span class="hero-meta-label">Bespoke Villas Delivered</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-number"><span class="counter-val" data-target="99">0</span><span class="counter-suffix">%</span></span>
+              <span class="hero-meta-label">Client Recommendation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: ANIMATED ARCHITECTURE SERVICES MARQUEE
+         =================================================================== -->
+    <section class="marquee-section" id="marqueeSection" aria-label="Services Ticker">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span class="marquee-text">Residential Architecture</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Bespoke Interior Styling</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Commercial Landmarks</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Sustainable Urbanism</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Historic Adaptive Reuse</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Landscape Architecture</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <!-- Duplicated for seamless infinite CSS scroll -->
+        <div class="marquee-item">
+          <span class="marquee-text">Residential Architecture</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Bespoke Interior Styling</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Commercial Landmarks</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Sustainable Urbanism</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Historic Adaptive Reuse</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+        <div class="marquee-item">
+          <span class="marquee-text">Landscape Architecture</span>
+          <i class="fas fa-square marquee-star"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: ABOUT COMPANY (PREMIUM SPLIT-IMAGE LAYOUT)
+         =================================================================== -->
+    <section class="about-split-section" id="aboutSection">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Split Images with floating badge -->
+          <div class="about-images-wrapper">
+            <div class="about-experience-badge">
+              <span class="badge-years">18+</span>
+              <span class="badge-label">Years of<br>Architectural<br>Mastery</span>
+            </div>
+            
+            <div class="about-img-main">
+              <img src="assets/about-exterior.webp" 
+                   alt="Architecture Prime Modern Residence Exterior">
+            </div>
+
+            <div class="about-img-secondary">
+              <img src="assets/interior-detail.webp" 
+                   alt="Interior Architectural Detailing">
+            </div>
+          </div>
+
+          <!-- About Narrative -->
+          <div class="about-content">
+            <div class="section-badge">About Atelier</div>
+            <h2 class="section-title">Designing Spaces That Feel Like <span class="font-serif">Sculptural Art</span></h2>
+            
+            <p class="section-desc">
+              Founded on the belief that environment dictates human emotion, Architecture Prime synthesizes timeless materiality, natural daylight kinetics, and structural honesty into every blueprint.
+            </p>
+
+            <div class="about-highlight-box">
+              <i class="fas fa-drafting-compass"></i>
+              <p>
+                "We don't merely construct physical walls; we curate the choreography between light, shadow, stone, and human presence."
+              </p>
+            </div>
+
+            <div class="about-features-list">
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Passive Solar Alignment</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Artisanal Material Curation</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Rigorous Structural Engineering</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Turnkey Construction Oversight</span>
+              </div>
+            </div>
+
+            <a href="404.html" class="btn btn-primary">
+              <span>Read Studio Story</span>
+              <div class="btn-icon-circle"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: OUR SERVICES (SIX LUXURY IMAGE CARDS)
+         =================================================================== -->
+    <section class="services-section" id="servicesSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">Our Disciplines</div>
+          <h2 class="section-title">Expert Design Services That <span class="font-serif">Shape Beautiful Spaces</span></h2>
+          <p class="section-desc">
+            From single-family minimalist sanctuaries to landmark corporate campuses, our interdisciplinary teams orchestrate every scale with immaculate execution.
+          </p>
+        </div>
+
+        <div class="services-grid-6">
+          <!-- Card 1 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-residential.webp" 
+                   alt="Residential Architecture">
+              <span class="service-card-number">01</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Residential Architecture</h3>
+              <p class="service-card-text">
+                Custom private villas, hill retreats, and modern penthouses created around individual lifestyles and natural topography.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-home service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-commercial.webp" 
+                   alt="Commercial Architecture">
+              <span class="service-card-number">02</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Commercial Landmarks</h3>
+              <p class="service-card-text">
+                Forward-thinking headquarters, flagship retail pavilions, and boutique hospitality spaces engineered for brand presence.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-building service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-interior.webp" 
+                   alt="Bespoke Interior Styling">
+              <span class="service-card-number">03</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Interior &amp; Spatial Styling</h3>
+              <p class="service-card-text">
+                Atmospheric spatial choreography, custom furniture fabrication, architectural lighting, and tactile material harmonization.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-couch service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-landscape.webp" 
+                   alt="Landscape Architecture">
+              <span class="service-card-number">04</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Landscape &amp; Biophilic Design</h3>
+              <p class="service-card-text">
+                Seamless indoor-outdoor integration featuring zero-edge reflection pools, zen courtyards, and native flora ecosystems.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-tree service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-restoration.webp" 
+                   alt="Restoration and Remodeling">
+              <span class="service-card-number">05</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Restoration &amp; Remodeling</h3>
+              <p class="service-card-text">
+                Breathing progressive life into historic structures while honoring their original soul, masonry, and architectural integrity.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-tools service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card-luxury">
+            <div class="service-card-img-wrap">
+              <img src="assets/service-sustainable.webp" 
+                   alt="Sustainable Architecture">
+              <span class="service-card-number">06</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Sustainable Eco-Architecture</h3>
+              <p class="service-card-text">
+                LEED Platinum and net-zero energy standards engineered with geo-thermal climate buffering and low-carbon materials.
+              </p>
+              <div class="service-card-footer">
+                <a href="404.html" class="service-link">
+                  <span>Discover Scope</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <i class="fas fa-leaf service-icon-preview"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: WHY CHOOSE US (ANIMATED STATISTICS)
+         =================================================================== -->
+    <section class="why-choose-section" id="whyChooseSection">
+      <div class="container">
+        <div class="why-choose-grid">
+          <!-- Visual with animated stats overlay -->
+          <div class="why-choose-image-box">
+            <img src="assets/why-choose-interior.webp" 
+                 alt="Luxury Modern Architecture Prime Interior">
+            <div class="stats-overlay-card">
+              <div class="stats-overlay-item">
+                <div class="stats-number"><span class="counter-val" data-target="350">0</span><span class="counter-suffix">+</span></div>
+                <div class="stats-label">Projects Completed</div>
+              </div>
+              <div class="stats-overlay-item">
+                <div class="stats-number"><span class="counter-val" data-target="98">0</span><span class="counter-suffix">%</span></div>
+                <div class="stats-label">Client Approval</div>
+              </div>
+              <div class="stats-overlay-item">
+                <div class="stats-number"><span class="counter-val" data-target="18">0</span><span class="counter-suffix">+</span></div>
+                <div class="stats-label">Countries Active</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value Proposition Details -->
+          <div class="why-choose-content">
+            <div class="section-badge">Why Choose Atelier</div>
+            <h2 class="section-title">Your Trusted Partner From <span class="font-serif">Concept To Consecration</span></h2>
+            <p class="section-desc">
+              We eliminate the friction between conceptual fantasy and real-world construction. Our clients enjoy uncompromising aesthetic fidelity and disciplined financial stewardship.
+            </p>
+
+            <div class="reasons-list">
+              <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-gem"></i></div>
+                <div class="reason-info">
+                  <h4>Uncompromising Materiality</h4>
+                  <p>Direct sourcing of Tuscan marble, Swiss thermally-broken glazing, and Japanese charred cedar timber.</p>
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-cube"></i></div>
+                <div class="reason-info">
+                  <h4>Hyper-Accurate 3D &amp; VR Prototyping</h4>
+                  <p>Walk through millimeter-accurate virtual twins of your future estate before a single foundation beam is poured.</p>
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="reason-info">
+                  <h4>Fixed-Price Turnkey Guarantees</h4>
+                  <p>Transparent bidding and stringent project management to prevent budget overruns or construction delays.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: METHODOLOGY — THE ARCHITECTURE OF CONCEPTION
+         =================================================================== -->
+    <section class="methodology-section" id="methodologySection">
+      <div class="container">
+        <div class="methodology-grid">
+          
+          <!-- Left Column: Sticky Narrative & Quote -->
+          <div class="methodology-narrative-col" data-aos="fade-right">
+            <div class="methodology-sticky-wrap">
+              <span class="methodology-tag">&mdash; METHODOLOGY</span>
+              <h2 class="methodology-title">The Architecture of Conception</h2>
+              <p class="methodology-lead">
+                Our protocol is defined by iterative refinement&mdash;progressing from raw site listening to digital millimeter twins, followed by bespoke hand craftsmanship.
+              </p>
+
+              <div class="methodology-quote-box">
+                <p class="methodology-quote-text">
+                  &ldquo;We do not design buildings to impress the camera; we construct geometries that elevate the human nervous system.&rdquo;
+                </p>
+                <span class="methodology-quote-author">&mdash; KAELEN VANCE, FOUNDING PRINCIPAL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Vertical Timeline with Glowing Nodes -->
+          <div class="methodology-timeline-col" data-aos="fade-left">
+            <div class="timeline-track-line"></div>
+
+            <!-- Phase 01 -->
+            <div class="timeline-phase-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="timeline-node-core"></span>
+              </div>
+              <div class="timeline-phase-content">
+                <span class="phase-label">PHASE 01</span>
+                <h3 class="phase-title">Site Forensic &amp; Topological Resonance</h3>
+                <p class="phase-desc">
+                  Comprehensive lidar scanning, subterranean hydrology mapping, and seasonal light angle solar audits to understand the site's primordial narrative.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 02 -->
+            <div class="timeline-phase-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="timeline-node-core"></span>
+              </div>
+              <div class="timeline-phase-content">
+                <span class="phase-label">PHASE 02</span>
+                <h3 class="phase-title">Spatial Geometry &amp; Monolithic Massing</h3>
+                <p class="phase-desc">
+                  Sculpting volumetric voids and solid masses. We balance sightlines with sacred privacy corridors, crafting intuitive domestic choreographies.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 03 -->
+            <div class="timeline-phase-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="timeline-node-core"></span>
+              </div>
+              <div class="timeline-phase-content">
+                <span class="phase-label">PHASE 03</span>
+                <h3 class="phase-title">Material Rigor &amp; Digital Twin BIM</h3>
+                <p class="phase-desc">
+                  Quarry visits in Carrara and Swiss Graub&uuml;nden to hand-select blocks of stone. Detailed Level 400 BIM modeling for micron-tight structural tolerances.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 04 -->
+            <div class="timeline-phase-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="timeline-node" aria-hidden="true">
+                <span class="timeline-node-core"></span>
+              </div>
+              <div class="timeline-phase-content">
+                <span class="phase-label">PHASE 04</span>
+                <h3 class="phase-title">Artisanal Fabrication &amp; Execution</h3>
+                <p class="phase-desc">
+                  Daily site presence under partner supervision. Custom millwork, flush architectural glazing, and bespoke landscape integration to final turnkey delivery.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: FEATURED ARCHITECTURAL PROJECTS (PREMIUM GALLERY)
+         =================================================================== -->
+    <section class="projects-section" id="projectsSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">Curated Portfolio</div>
+          <h2 class="section-title">Featured Works Of <span class="font-serif">Architectural Distinction</span></h2>
+          <p class="section-desc">
+            Explore our catalog of internationally celebrated residential villas, commercial structures, and avant-garde interiors.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="residential">Residential</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <button class="filter-btn" data-filter="interior">Interior Styling</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Item 1 -->
+          <div class="project-card" data-category="residential">
+            <img src="assets/project-horizon-villa.webp" 
+                 alt="Horizon Villa, Malibu" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Residential Villa</span>
+              <h3 class="project-title">The Horizon Villa</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Malibu, California</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="project-card" data-category="commercial">
+            <img src="assets/project-lumina-pavilion.webp" 
+                 alt="Lumina Pavilion, Zurich" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Commercial Landmark</span>
+              <h3 class="project-title">The Lumina Pavilion</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Zurich, Switzerland</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="project-card" data-category="residential">
+            <img src="assets/project-valhalla-ridge.webp" 
+                 alt="Valhalla Ridge Residence, Aspen" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Alpine Architecture</span>
+              <h3 class="project-title">Valhalla Ridge Estate</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Aspen, Colorado</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="project-card" data-category="commercial">
+            <img src="assets/project-monolith-pavilion.webp" 
+                 alt="Monolith Cultural Center, Kyoto" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Cultural Institution</span>
+              <h3 class="project-title">Monolith Pavilion</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Kyoto, Japan</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="project-card" data-category="interior">
+            <img src="assets/project-azure-penthouse.webp" 
+                 alt="Azure Penthouse, Manhattan" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Penthouse Interior</span>
+              <h3 class="project-title">The Azure Penthouse</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Manhattan, New York</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="project-card" data-category="residential">
+            <img src="assets/project-solis-oasis.webp" 
+                 alt="Solis Desert Retreat, Scottsdale" class="project-card-image">
+            <div class="project-card-overlay">
+              <span class="project-meta-tag">Desert Modernism</span>
+              <h3 class="project-title">Solis Oasis Sanctuary</h3>
+              <div class="project-location"><i class="fas fa-map-marker-alt"></i> Scottsdale, Arizona</div>
+              <a href="404.html" class="project-view-btn">
+                <span>View Full Case Study</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: AWARDS & RECOGNITION (ELEGANT DARK BACKGROUND)
+         =================================================================== -->
+    <section class="awards-section" id="awardsSection">
+      <div class="container">
+        <div class="awards-grid">
+          <div class="awards-intro">
+            <div class="section-badge badge-dark">Distinctions</div>
+            <h2>Global Accolades That <span class="font-serif">Validate Our Purity</span></h2>
+            <p>
+              Over nearly two decades, our projects have garnered the most coveted global honors in contemporary architecture, sustainable urban engineering, and bespoke interior design.
+            </p>
+            <a href="404.html" class="btn btn-accent">
+              <span>View All 24 Distinctions</span>
+              <div class="btn-icon-circle"><i class="fas fa-arrow-right"></i></div>
+            </a>
+          </div>
+
+          <div class="award-item-list">
+            <div class="award-item">
+              <span class="award-year">2026</span>
+              <div class="award-content">
+                <h4>World Architecture Festival — First Prize</h4>
+                <span>Excellence in Sustainable Residential Villa Architecture</span>
+              </div>
+              <i class="fas fa-trophy award-trophy"></i>
+            </div>
+
+            <div class="award-item">
+              <span class="award-year">2025</span>
+              <div class="award-content">
+                <h4>Architectural Digest Golden Compass</h4>
+                <span>Pioneering Monolithic Concrete &amp; Biophilic Spatial Design</span>
+              </div>
+              <i class="fas fa-medal award-trophy"></i>
+            </div>
+
+            <div class="award-item">
+              <span class="award-year">2024</span>
+              <div class="award-content">
+                <h4>International Interior Design Excellence</h4>
+                <span>Best Ultra-Luxury Penthouse Transformation in North America</span>
+              </div>
+              <i class="fas fa-award award-trophy"></i>
+            </div>
+
+            <div class="award-item">
+              <span class="award-year">2023</span>
+              <div class="award-content">
+                <h4>Global Green Building Vanguard Medal</h4>
+                <span>Carbon-Neutral Timber Framework &amp; Net-Zero Innovation</span>
+              </div>
+              <i class="fas fa-certificate award-trophy"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: CLIENT TESTIMONIALS WITH ANIMATED SLIDER
+         =================================================================== -->
+    <section class="testimonials-section" id="testimonialsSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-badge">Client Voices</div>
+          <h2 class="section-title">Words Of Appreciation From <span class="font-serif">Esteemed Patrons</span></h2>
+          <p class="section-desc">
+            We hold long-standing relationships with visionary homeowners, cultural foundations, and corporate captains across 18 countries.
+          </p>
+        </div>
+
+        <div class="testimonials-container">
+          <div class="testimonial-card-single">
+            <div class="quote-icon-decor"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">
+              “Architecture Prime redesigned our waterfront estate beyond our loftiest expectations. The interplay of natural limestone and floor-to-ceiling glass creates an ethereal living atmosphere that transforms with every sunset.”
+            </p>
+            <div class="testimonial-client-meta">
+              <div class="client-info-wrap">
+                <img src="assets/client-victoria.webp" 
+                     alt="Victoria Sterling" class="client-avatar">
+                <div>
+                  <h4 class="client-name">Victoria &amp; David Sterling</h4>
+                  <span class="client-role">Private Villa Owners, Malibu</span>
+                </div>
+              </div>
+              <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="testimonial-nav-btns">
+            <button class="nav-arrow-btn nav-prev" aria-label="Previous Testimonial">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="nav-arrow-btn nav-next" aria-label="Next Testimonial">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: FAQ WITH SMOOTH ACCORDION
+         =================================================================== -->
+    <section class="faq-section" id="faqSection">
+      <div class="container">
+        <div class="faq-grid">
+          <!-- Explanatory Card -->
+          <div class="faq-info-card">
+            <div class="section-badge">Clarity &amp; Transparency</div>
+            <h3>Frequently Asked Inquiries</h3>
+            <p>
+              Commissioning a bespoke architectural work is an intimate, high-stakes journey. Here are concise answers to common client questions regarding timelines, investment structures, and site parameters.
+            </p>
+            <a href="404.html" class="btn btn-outline">
+              <span>Ask A Specific Question</span>
+            </a>
+          </div>
+
+          <!-- Accordion Elements -->
+          <div class="accordion-list">
+            <!-- FAQ 1 -->
+            <div class="accordion-item active">
+              <div class="accordion-header">
+                <h4 class="accordion-title">What is the standard timeline for a bespoke luxury residence?</h4>
+                <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  A complete custom estate typically requires 6 to 9 months for schematic design, engineering, and municipal approvals, followed by 12 to 18 months for precision construction and interior detailing.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="accordion-title">Do you take on architectural commissions internationally?</h4>
+                <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes. Architecture Prime maintains active projects across North America, Europe, the Middle East, and East Asia. We partner with vetted local structural engineers to satisfy regional municipal requirements.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="accordion-title">How do you ensure budget control during turnkey construction?</h4>
+                <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  We operate with transparent Guaranteed Maximum Price (GMP) contracts, detailed material schedules, and rigorous independent quantity surveying at every construction milestone.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="accordion-title">Can you incorporate passive house &amp; off-grid solar technology?</h4>
+                <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Absolutely. Over 60% of our residential commissions are certified LEED Platinum or Net-Zero Ready, integrating concealed solar arrays, geothermal heating, and rainwater reclamation.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="accordion-title">How does your client portal work for remote patrons?</h4>
+                <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Through our encrypted Client Portal, patrons receive weekly 4K drone videography, live site camera access, financial disbursement ledgers, and interactive 3D BIM model updates in real time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 11: LATEST BLOGS, CONTACT CTA & PROFESSIONAL FOOTER
+         =================================================================== -->
+    <section class="blogs-cta-footer-section" id="blogsCtaSection">
+      <div class="container">
+        <!-- Sub-part A: Latest Blogs -->
+        <div class="section-header text-center">
+          <div class="section-badge">Atelier Insights</div>
+          <h2 class="section-title">Architectural Discourse &amp; <span class="font-serif">Design Trends</span></h2>
+          <p class="section-desc">
+            Essays on spatial philosophy, regenerative building materials, and contemporary interior minimalism curated by our research fellows.
+          </p>
+        </div>
+
+        <div class="latest-blogs-grid">
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-brutalism.webp" 
+                   alt="Modern Brutalism and Warm Textures">
+              <span class="blog-badge-date">Oct 28, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Materiality</span>
+              <h3 class="blog-card-title">Softening Monolithic Brutalism With Warm Tactile Limestone</h3>
+              <p class="blog-card-snippet">
+                How modern architects are humanizing bold structural concrete through brushed travertine, natural brass, and diffused daylighting.
+              </p>
+              <a href="404.html" class="blog-read-more">
+                <span>Read Full Essay</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-acoustics.webp" 
+                   alt="Spatial Acoustics and Interior Serenity">
+              <span class="blog-badge-date">Oct 14, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Spatial Philosophy</span>
+              <h3 class="blog-card-title">The Invisible Luxury: Acoustic Zoning In Open-Plan Penthouses</h3>
+              <p class="blog-card-snippet">
+                Strategies for eliminating harsh sonic reverberation in high-ceiling residences without sacrificing pristine visual minimalism.
+              </p>
+              <a href="404.html" class="blog-read-more">
+                <span>Read Full Essay</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-travertine.webp" 
+                   alt="Biophilic Architecture Integration">
+              <span class="blog-badge-date">Sep 30, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Sustainability</span>
+              <h3 class="blog-card-title">Biophilic Integration: Framing Unspoiled Nature As Living Art</h3>
+              <p class="blog-card-snippet">
+                Harnessing cantilevered floorplates and motorized glass facades to blur the threshold between interior shelter and outdoor wildness.
+              </p>
+              <a href="404.html" class="blog-read-more">
+                <span>Read Full Essay</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sub-part B: Integrated Contact CTA Banner -->
+        <div class="contact-cta-banner">
+          <div class="cta-banner-content">
+            <div class="cta-banner-text">
+              <div class="section-badge badge-dark">Initiate Commission</div>
+              <h2>Ready to Bring Your <span class="font-serif">Architectural Dream</span> to Life?</h2>
+              <p>
+                Connect directly with our founding principals to discuss your site, conceptual ideas, and investment parameters.
+              </p>
+            </div>
+            <div class="cta-banner-actions">
+              <a href="404.html" class="btn btn-accent">
+                <span>Book Consultation</span>
+                <div class="btn-icon-circle"><i class="fas fa-arrow-right"></i></div>
+              </a>
+              <a href="404.html" class="btn btn-outline-light">
+                <i class="fas fa-phone-alt"></i>
+                <span>Direct Line</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-part C: Professional Architectural Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-top-grid">
+            <div class="footer-col-about">
+              <a href="index.html" class="site-logo" aria-label="Stackly Architecture" style="margin-bottom: 1.5rem;">
+                <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+              </a>
+              <p class="footer-about-text">
+                Sculptural architecture, parametric engineering, and bespoke luxury interior environments crafted with absolute structural fidelity.
+              </p>
+              <div class="footer-social-row">
+                <a href="404.html" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="404.html" class="social-circle" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="social-circle" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="404.html" class="social-circle" aria-label="Houzz"><i class="fab fa-houzz"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Navigation</h4>
+              <ul class="footer-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Client Portal</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Disciplines</h4>
+              <ul class="footer-nav-list">
+                <li><a href="services.html">Residential Villas</a></li>
+                <li><a href="services.html">Commercial Landmarks</a></li>
+                <li><a href="services.html">Spatial Interiors</a></li>
+                <li><a href="services.html">Historic Restoration</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Direct Office</h4>
+              <p class="footer-newsletter-text">
+                <i class="fas fa-map-marker-alt" style="color: var(--color-accent-secondary); width: 18px;"></i> MMR Complex, chinna tirupathi,<br>
+                <span style="display: inline-block; padding-left: 22px;">Salem, Tamil Nadu, IN 636008.</span><br>
+                <i class="fas fa-phone-alt" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> +91 9876543210<br>
+                <i class="fas fa-envelope" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> info@stackly.com
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>&copy; 2026 Stackly Architecture Inc. All Rights Reserved.</div>
+            <div class="footer-bottom-links">
+              <a href="404.html">Privacy Framework</a>
+              <a href="404.html">Terms of Engagement</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Core Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

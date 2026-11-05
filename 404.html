@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Coordinate Not Found | ARCHITECTURE PRIME</title>
+  <meta name="description" content="The requested architectural dossier or spatial coordinate could not be located within the Stackly Atelier archive.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .error-404-section {
+      min-height: 100vh;
+      background-color: #0E1011;
+      background-image:
+        radial-gradient(circle at 20% 25%, rgba(139, 38, 62, 0.22) 0%, transparent 50%),
+        radial-gradient(circle at 80% 75%, rgba(184, 74, 101, 0.14) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+      color: #FFFFFF;
+    }
+
+    .error-404-card {
+      max-width: 760px;
+      width: 100%;
+      background: rgba(24, 27, 30, 0.85);
+      border: 1px solid rgba(184, 74, 101, 0.32);
+      border-radius: 16px;
+      padding: 4rem 3rem;
+      text-align: center;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65), inset 0 0 40px rgba(139, 38, 62, 0.12);
+      position: relative;
+    }
+
+    .error-404-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1.15rem;
+      border-radius: 50px;
+      background: rgba(184, 74, 101, 0.14);
+      border: 1px solid rgba(184, 74, 101, 0.38);
+      color: #B84A65;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .error-404-code {
+      font-family: var(--font-serif, 'Cormorant Garamond', serif);
+      font-size: clamp(6rem, 15vw, 10.5rem);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #FFFFFF 0%, #D98A9C 55%, #8B263E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .error-404-title {
+      font-family: var(--font-heading, sans-serif);
+      font-size: clamp(1.65rem, 3.5vw, 2.5rem);
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .error-404-desc {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .error-404-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.15rem 1.5rem;
+      margin-bottom: 2.5rem;
+      background: rgba(14, 16, 17, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .error-404-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .error-404-meta i {
+      color: #B84A65;
+    }
+
+    .error-404-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      .error-404-card {
+        padding: 2.75rem 1.5rem;
+      }
+      .error-404-actions {
+        flex-direction: column;
+      }
+      .error-404-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="Stackly Architecture">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+      </a>
+
+      <nav class="nav-menu-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-header-login">
+          <i class="fas fa-user-shield"></i>
+          <span>Client Portal</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span class="link-index">01</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span class="link-index">02</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span><span class="link-index">03</span></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="link-index">04</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span><span class="link-index">05</span></a>
+      <a href="login.html" class="mobile-nav-link"><span>Client Login</span><span class="link-index">06</span></a>
+    </div>
+  </div>
+
+  <!-- 404 ARCHITECTURAL VIEWPORT -->
+  <main>
+    <section class="error-404-section">
+      <div class="error-404-card">
+        <div class="error-404-badge">
+          <i class="fas fa-drafting-compass"></i>
+          <span>Architectural Coordinate Not Found</span>
+        </div>
+
+        <div class="error-404-code">404</div>
+
+        <h1 class="error-404-title">Blueprint Outside Studio Bounds</h1>
+
+        <p class="error-404-desc">
+          The architectural dossier, external resource, or telemetry endpoint you requested is either archived under private patron non-disclosure or does not exist at this coordinate.
+        </p>
+
+        <div class="error-404-meta">
+          <span><i class="fas fa-shield-alt"></i> Status: 404 Unmapped Sector</span>
+          <span><i class="fas fa-compass"></i> Grid: Stackly Vault v4.2</span>
+        </div>
+
+        <div class="error-404-actions">
+          <a href="index.html" class="btn btn-accent">
+            <span>Return to Atelier Home</span>
+            <div class="btn-icon-circle"><i class="fas fa-home"></i></div>
+          </a>
+          <button type="button" class="btn btn-outline-light" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }">
+            <i class="fas fa-arrow-left"></i>
+            <span>Return to Previous View</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

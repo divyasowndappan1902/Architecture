@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Portal Access — STACKLY Atelier</title>
+  <meta name="description" content="Provision an encrypted Admin Studio Governance credential or Client Patron Commission account at Stackly Atelier.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Portal Styles -->
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-split-screen">
+    <!-- Left Visual Editorial Pane -->
+    <div class="auth-visual-pane">
+      <img src="assets/interior-detail.webp" 
+           alt="Stackly Architectural Studio Vault" 
+           class="auth-visual-bg"
+           id="signupVisualBg">
+      <div class="auth-visual-overlay"></div>
+
+      <div class="auth-visual-header">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="brand-logo-img">
+        </a>
+      </div>
+
+      <div class="auth-visual-quote">
+        <div class="auth-security-badge" id="signupVisualBadge">
+          <i class="fas fa-gem"></i>
+          <span>Private Patron Onboarding &bull; 256-Bit Vault</span>
+        </div>
+        <p class="auth-quote-text" id="signupVisualQuote">
+          &ldquo;Every commission begins as a sacred dialogue between geological permanence and human aspiration.&rdquo;
+        </p>
+        <span class="auth-quote-author" id="signupVisualAuthor">&mdash; Stackly Patron Onboarding Committee</span>
+
+        <!-- Respective Role Highlights List on Visual Pane -->
+        <div id="signupVisualPerks" style="margin-top: 2rem; display: grid; gap: 0.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.82);">
+            <i class="fas fa-check-circle" style="color: var(--auth-rose-accent);"></i>
+            <span id="signupPerk1">Real-time 4K drone &amp; biometric site telemetry feeds</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.82);">
+            <i class="fas fa-check-circle" style="color: var(--auth-rose-accent);"></i>
+            <span id="signupPerk2">Interactive Level 400 3D BIM blueprints &amp; material approvals</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.82);">
+            <i class="fas fa-check-circle" style="color: var(--auth-rose-accent);"></i>
+            <span id="signupPerk3">Direct encrypted escrow &amp; milestone disbursement ledgers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-visual-footer">
+        <span class="auth-confidential-note" id="signupConfidentialNote">
+          PATRON REGISTRY &bull; ZURICH, NEW YORK &amp; TOKYO ATELIERS
+        </span>
+      </div>
+    </div>
+
+    <!-- Right Form Pane -->
+    <div class="auth-form-pane">
+      <div class="auth-form-wrapper">
+        <a href="index.html" class="auth-back-link">
+          <i class="fas fa-arrow-left"></i>
+          <span>Return to Atelier Home</span>
+        </a>
+
+        <!-- Mobile Brand Logo -->
+        <div class="auth-brand-center">
+          <a href="index.html" aria-label="Stackly Home">
+            <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="brand-logo-img">
+          </a>
+        </div>
+
+        <div class="auth-form-header">
+          <span class="auth-pre-title" id="signupPreTitle">&mdash; PATRON &amp; STUDIO PROVISIONING</span>
+          <h1 class="auth-form-title" id="signupMainTitle">Request <span style="font-family: var(--auth-font-serif); font-style: italic; color: var(--auth-rose-accent);">Access</span></h1>
+          <p class="auth-form-desc" id="signupSubDesc">
+            Select your account role below to initialize a Private Client Patron Suite or provision an Admin Studio Governance key.
+          </p>
+        </div>
+
+        <form id="signupForm" novalidate>
+          <!-- Unique & Excellent Architectural Role Selection Slot (Admin & Client) -->
+          <div class="auth-role-group">
+            <div class="auth-role-slot-shell" role="radiogroup" aria-label="Select Account Role">
+              <div class="auth-role-slot-header">
+                <span class="auth-field-label">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Select Registration Role Slot</span>
+                </span>
+                <span class="role-slot-live-tag" id="signupRoleClearanceTag">Tier 02 &bull; Client Patron</span>
+              </div>
+
+              <div class="auth-role-grid">
+                <!-- Admin Role Slot -->
+                <label class="auth-role-card" data-role="admin">
+                  <input type="radio" name="studio_role" value="admin">
+                  <div class="role-card-top">
+                    <div class="role-card-identity">
+                      <div class="role-card-emblem">
+                        <i class="fas fa-user-shield"></i>
+                      </div>
+                      <div class="role-card-titles">
+                        <span class="role-card-tier">Studio Governance</span>
+                        <span class="role-card-name">Admin</span>
+                      </div>
+                    </div>
+                    <span class="role-radio-dot"><i class="fas fa-check"></i></span>
+                  </div>
+                </label>
+
+                <!-- Client Role Slot (Default active on Signup for Patrons) -->
+                <label class="auth-role-card active" data-role="client">
+                  <input type="radio" name="studio_role" value="client" checked>
+                  <div class="role-card-top">
+                    <div class="role-card-identity">
+                      <div class="role-card-emblem">
+                        <i class="fas fa-gem"></i>
+                      </div>
+                      <div class="role-card-titles">
+                        <span class="role-card-tier">Private Commission</span>
+                        <span class="role-card-name">Client</span>
+                      </div>
+                    </div>
+                    <span class="role-radio-dot"><i class="fas fa-check"></i></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Name & Email Grid -->
+          <div class="auth-grid-2">
+            <div class="auth-field" id="signup-field-name">
+              <label class="auth-field-label" for="signupName" id="signupNameLabel" style="margin-bottom: 0.55rem;">Patron Full Name *</label>
+              <div class="auth-input-wrapper">
+                <input type="text" id="signupName" class="auth-input" placeholder="e.g. Lord Alexander Wright" required autocomplete="name">
+              </div>
+              <span class="auth-field-error">Full name is required for credential issuance.</span>
+            </div>
+
+            <div class="auth-field" id="signup-field-email">
+              <label class="auth-field-label" for="signupEmail" id="signupEmailLabel" style="margin-bottom: 0.55rem;">Executive Email *</label>
+              <div class="auth-input-wrapper">
+                <input type="email" id="signupEmail" class="auth-input" placeholder="patron@estateholdings.com" required autocomplete="email">
+              </div>
+              <span class="auth-field-error">Please enter a valid email address.</span>
+            </div>
+          </div>
+
+          <!-- Passkey & Confirm Passkey -->
+          <div class="auth-grid-2">
+            <div class="auth-field" id="signup-field-password">
+              <label class="auth-field-label" for="signupPassword" id="signupPasswordLabel" style="margin-bottom: 0.55rem;">Create Master Passkey *</label>
+              <div class="auth-input-wrapper">
+                <input type="password" id="signupPassword" class="auth-input" placeholder="Min. 6 characters" minlength="6" required autocomplete="new-password">
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span class="auth-field-error">Password must be at least 6 characters.</span>
+            </div>
+
+            <div class="auth-field" id="signup-field-confirm">
+              <label class="auth-field-label" for="signupConfirmPassword" style="margin-bottom: 0.55rem;">Confirm Passkey *</label>
+              <div class="auth-input-wrapper">
+                <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="Repeat passkey" minlength="6" required autocomplete="new-password">
+              </div>
+              <span class="auth-field-error">Passkeys do not match.</span>
+            </div>
+          </div>
+
+          <!-- NDA / Governance Covenant Checkbox -->
+          <div class="auth-actions-row">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="signupTerms" checked required>
+              <span id="signupTermsLabel">I accept the Stackly Non-Disclosure Covenant &amp; Biometric Telemetry Protocol</span>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="auth-submit-btn" id="signupSubmitBtn">
+            <span id="signupSubmitBtnText">Initialize Client Patron Suite</span>
+            <i class="fas fa-arrow-right" id="signupSubmitBtnIcon"></i>
+          </button>
+
+          <!-- Single Sign-On -->
+          <div class="auth-divider">
+            <span>Or Provision Via Enterprise Key</span>
+          </div>
+
+          <div class="auth-sso-grid">
+            <button type="button" class="auth-sso-btn" onclick="window.location.href='404.html'">
+              <i class="fab fa-apple"></i>
+              <span>Apple ID</span>
+            </button>
+            <button type="button" class="auth-sso-btn" onclick="window.location.href='404.html'">
+              <i class="fab fa-google"></i>
+              <span>Google SSO</span>
+            </button>
+          </div>
+
+          <!-- Switch to Login -->
+          <p class="auth-switch-prompt">
+            Already hold an active atelier passkey?
+            <a href="login.html">Sign In to Portal</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Atelier — ARCHITECTURE PRIME</title>
+  <meta name="description" content="Discover the origins, design philosophy, leadership team, and global architectural ethos of Architecture Prime.">
+  
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Architectural Page Preloader -->
+  <div class="site-preloader" id="pagePreloader" aria-hidden="true">
+    <div class="preloader-grid-lines">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="preloader-inner">
+      <div class="preloader-brand-wrap">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="preloader-logo">
+      </div>
+      <div class="preloader-tagline">STACKLY ATELIER &bull; SPATIAL ENGINEERING</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-meta">
+        <span class="preloader-status">CALIBRATING SPATIAL GEOMETRY</span>
+        <span class="preloader-counter" id="preloaderCounter">00%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="Stackly Architecture">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+      </a>
+
+      <nav class="nav-menu-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-header-login">
+          <i class="fas fa-user-shield"></i>
+          <span>Client Portal</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span class="link-index">01</span></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About</span><span class="link-index">02</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span><span class="link-index">03</span></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="link-index">04</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span><span class="link-index">05</span></a>
+      <a href="login.html" class="mobile-nav-link"><span>Client Login</span><span class="link-index">06</span></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 492-8820</div>
+      <div class="mobile-contact-item"><i class="fas fa-envelope"></i> concierge@architectureprime.com</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================================================================
+         ABOUT SECTION 1: HERO
+         =================================================================== -->
+    <section class="page-hero-section" id="aboutHero">
+      <img src="assets/about-exterior.webp" 
+           alt="Architecture Prime Atelier Exterior" class="page-hero-bg">
+      <div class="page-hero-overlay"></div>
+      
+      <div class="container">
+        <div class="page-hero-content" data-aos="fade-up">
+          <div class="section-badge badge-dark">Our Origins &amp; Ethos</div>
+          <h1 class="page-hero-title">Sculpting Timeless <span class="font-serif">Architectural Legacies</span></h1>
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>About Atelier</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 2: COMPANY INTRODUCTION
+         =================================================================== -->
+    <section class="about-split-section" id="companyIntro">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images-wrapper" data-aos="fade-right">
+            <div class="about-img-main">
+              <img src="assets/interior-detail.webp" 
+                   alt="Crafted Interior Details">
+            </div>
+            <div class="about-experience-badge">
+              <span class="badge-years">2008</span>
+              <span class="badge-label">Year of<br>Studio<br>Inception</span>
+            </div>
+          </div>
+
+          <div class="about-content" data-aos="fade-left">
+            <div class="section-badge">Company Introduction</div>
+            <h2 class="section-title">An International Atelier of <span class="font-serif">Radical Refinement</span></h2>
+            <p class="section-desc">
+              Architecture Prime was founded as an antidote to disposable mass construction. We operate at the intersection of monolithic structural clarity and poetic human sensory experience.
+            </p>
+            <p>
+              Headquartered with ateliers in Zurich and New York, our practice brings together master architects, parametric engineers, interior curators, and environmental physicists to manifest residences that stand untouched by fleeting fashion.
+            </p>
+            <div class="about-highlight-box">
+              <i class="fas fa-feather-alt"></i>
+              <p>
+                "Architecture must possess gravity without arrogance; it must ground the dweller while elevating their gaze."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 3: OUR STORY
+         =================================================================== -->
+    <section class="story-section" id="ourStory">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content" data-aos="fade-right">
+            <div class="section-badge">The Journey</div>
+            <h2 class="section-title">From Milanese Classical Roots to <span class="font-serif">Global Modernism</span></h2>
+            <p>
+              The atelier began with a single hillside residence in Lake Como. That initial project crystallized our signature design language: sunken concrete frames, vast apertures of shadowless glass, and unadorned volcanic stone.
+            </p>
+            <p>
+              Over eighteen years, Architecture Prime expanded into bespoke estates across the Swiss Alps, oceanfront pavilions in Southern California, and corporate cultural monuments in Tokyo. Yet our founding rigor remains intact: we accept only twelve custom commissions per year to guarantee total principal involvement.
+            </p>
+            <a href="404.html" class="btn btn-outline">
+              <span>Explore Our Disciplines</span>
+            </a>
+          </div>
+
+          <div class="story-image-mosaic" data-aos="fade-left">
+            <div class="story-mosaic-item">
+              <img src="assets/service-residential.webp" 
+                   alt="Modern Villa Architecture">
+            </div>
+            <div class="story-mosaic-item">
+              <img src="assets/service-landscape.webp" 
+                   alt="Landscape Integration">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 4: MISSION AND VISION
+         =================================================================== -->
+    <section class="mission-vision-section" id="missionVision">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Core Convictions</div>
+          <h2 class="section-title">Our Guiding <span class="font-serif">North Star</span></h2>
+          <p class="section-desc">
+            We are bound by dual commitments to spatial transcendence and planetary stewardship.
+          </p>
+        </div>
+
+        <div class="mission-vision-grid">
+          <!-- Mission -->
+          <div class="mv-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="mv-icon"><i class="fas fa-compass"></i></div>
+            <h3 class="section-title">Our Mission</h3>
+            <p>
+              To design and build enduring structures of uncompromising aesthetic honesty, fusing artisanal material craft with regenerative engineering to foster sanctuary, quietude, and inspiration for generations.
+            </p>
+            <ul class="about-features-list" style="margin-top: 1.5rem;">
+              <li class="feature-item"><i class="fas fa-check"></i> Bespoke, client-centric authorship</li>
+              <li class="feature-item"><i class="fas fa-check"></i> Authentic, untampered materials</li>
+            </ul>
+          </div>
+
+          <!-- Vision -->
+          <div class="mv-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="mv-icon"><i class="fas fa-eye"></i></div>
+            <h3 class="section-title">Our Vision</h3>
+            <p>
+              To lead global luxury architecture away from ostentatious excess and toward profound architectural purity, where net-zero carbon efficiency harmonizes effortlessly with transcendent sensory luxury.
+            </p>
+            <ul class="about-features-list" style="margin-top: 1.5rem;">
+              <li class="feature-item"><i class="fas fa-check"></i> Net-zero environmental balance</li>
+              <li class="feature-item"><i class="fas fa-check"></i> Enduring generational permanence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 5: DESIGN PHILOSOPHY (DARK LUXURY SECTION)
+         =================================================================== -->
+    <section class="philosophy-section" id="philosophySection">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge badge-dark">Spatial Doctrine</div>
+          <h2 class="section-title" style="color: var(--color-white);">The Pillars of <span class="font-serif">Architecture Prime</span></h2>
+          <p class="section-desc" style="color: rgba(255, 255, 255, 0.7);">
+            Every line drawn in our studios adheres to three non-negotiable architectural tenets.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card" data-aos="fade-up" data-aos-delay="100">
+            <h4>01. Contextual Harmony</h4>
+            <p>
+              A building must appear as if it grew organically from its native topography. We study natural sun angles, wind corridors, and ancestral geological lines to anchor every design in its place.
+            </p>
+          </div>
+
+          <div class="philosophy-card" data-aos="fade-up" data-aos-delay="200">
+            <h4>02. Honest Materiality</h4>
+            <p>
+              We reject faux finishes and superficial veneers. Our palettes celebrate the raw tactile beauty of hand-poured board-formed concrete, bush-hammered granite, oxidized bronze, and solid white oak.
+            </p>
+          </div>
+
+          <div class="philosophy-card" data-aos="fade-up" data-aos-delay="300">
+            <h4>03. Light As Matter</h4>
+            <p>
+              Daylight is not treated as mere illumination; it is our primary building material. We sculpt deep shadow-reveals and skylight light-wells that mark the poetic passage of time across bare walls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 6: EXPERTISE AND STATISTICS
+         =================================================================== -->
+    <section class="why-choose-section" id="expertiseStats">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Atelier Scale</div>
+          <h2 class="section-title">Mastery Proven Through <span class="font-serif">Data &amp; Longevity</span></h2>
+        </div>
+
+        <div class="stats-counter-grid" style="max-width: 1000px; margin: 0 auto; border: none;" data-aos="fade-up">
+          <div class="stat-item-box" style="text-align: center;">
+            <div class="stat-counter-number">
+              <span class="counter-val" data-target="18">0</span><span class="counter-suffix">+</span>
+            </div>
+            <span class="stat-counter-label">Years of Atelier Practice</span>
+          </div>
+
+          <div class="stat-item-box" style="text-align: center;">
+            <div class="stat-counter-number">
+              <span class="counter-val" data-target="350">0</span><span class="counter-suffix">+</span>
+            </div>
+            <span class="stat-counter-label">Global Projects Completed</span>
+          </div>
+
+          <div class="stat-item-box" style="text-align: center;">
+            <div class="stat-counter-number">
+              <span class="counter-val" data-target="24">0</span>
+            </div>
+            <span class="stat-counter-label">International Architecture Trophies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 6.5: CHRONOLOGY / TIMELINE (DARK OBSIDIAN & ROSE)
+         =================================================================== -->
+    <section class="chronology-section" id="atelierChronology">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="chronology-tag">&mdash; EIGHTEEN YEARS OF EVOLUTION</div>
+          <h2 class="section-title chronology-main-title">The Stackly Chronology</h2>
+          <p class="section-desc chronology-subtitle">
+            Milestones of our architectural pilgrimage across four continents.
+          </p>
+        </div>
+
+        <div class="chronology-timeline-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="chronology-track-line"></div>
+
+          <!-- 2008 -->
+          <div class="chronology-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="chronology-node">
+              <span class="chronology-node-core"></span>
+            </div>
+            <div class="chronology-content">
+              <span class="chronology-year">2008</span>
+              <h3 class="chronology-title">Zurich Foundation</h3>
+              <p class="chronology-desc">
+                Kaelen Vance and H&eacute;l&egrave;ne Marceau establish Stackly Atelier along the Limmat River in Zurich, completing their first alpine retreat in St. Moritz.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2012 -->
+          <div class="chronology-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="chronology-node">
+              <span class="chronology-node-core"></span>
+            </div>
+            <div class="chronology-content">
+              <span class="chronology-year">2012</span>
+              <h3 class="chronology-title">Venice Architecture Biennale</h3>
+              <p class="chronology-desc">
+                Commissioned to erect the Swiss Pavilion installation &ldquo;Tectonic Stillness,&rdquo; exploring monolithic cast concrete volumes interacting with tidal lagoon light.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2016 -->
+          <div class="chronology-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="chronology-node">
+              <span class="chronology-node-core"></span>
+            </div>
+            <div class="chronology-content">
+              <span class="chronology-year">2016</span>
+              <h3 class="chronology-title">Tokyo Studio Opening (Aoyama)</h3>
+              <p class="chronology-desc">
+                Expanding into East Asia with our Aoyama studio, partnering with master carpenter guilds in Kyoto to merge traditional joinery with parametric carbon concrete.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2024-2026 -->
+          <div class="chronology-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="chronology-node">
+              <span class="chronology-node-core"></span>
+            </div>
+            <div class="chronology-content">
+              <span class="chronology-year">2024 &ndash; 2026</span>
+              <h3 class="chronology-title">New York Flagship Atelier &amp; Global Honors</h3>
+              <p class="chronology-desc">
+                Establishing our Americas headquarters on Madison Avenue, delivering landmark carbon-neutral residential towers and winning global architectural accolades.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 7: OUR TEAM
+         =================================================================== -->
+    <section class="team-section" id="ourTeam">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Atelier Principals</div>
+          <h2 class="section-title">The Visionaries Behind <span class="font-serif">Every Blueprint</span></h2>
+          <p class="section-desc">
+            Led by internationally recognized architects and design theorists with deep expertise across structural engineering and bespoke spatial interiors.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-img-wrap">
+              <img src="assets/team-elena.webp" 
+                   alt="Elena Rostova">
+              <div class="team-social-overlay">
+                <a href="404.html" class="team-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="team-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Elena Rostova</h4>
+              <span class="team-role">Founding Principal &amp; Lead Architect</span>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-img-wrap">
+              <img src="assets/team-marcus.webp" 
+                   alt="Marcus Vance">
+              <div class="team-social-overlay">
+                <a href="404.html" class="team-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="team-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Marcus Vance</h4>
+              <span class="team-role">Partner, Structural Innovation</span>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-img-wrap">
+              <img src="assets/team-sophia.webp" 
+                   alt="Sophia Chen">
+              <div class="team-social-overlay">
+                <a href="404.html" class="team-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="team-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Sophia Chen</h4>
+              <span class="team-role">Creative Director, Interior Styling</span>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-img-wrap">
+              <img src="assets/team-julian.webp" 
+                   alt="Julian Sterling">
+              <div class="team-social-overlay">
+                <a href="404.html" class="team-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="team-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Julian Sterling</h4>
+              <span class="team-role">Director of Sustainable Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT SECTION 8: CTA AND FOOTER
+         =================================================================== -->
+    <section class="blogs-cta-footer-section" id="aboutCtaFooter">
+      <div class="container">
+        <!-- CTA Banner -->
+        <div class="contact-cta-banner" data-aos="fade-up">
+          <div class="cta-banner-content">
+            <div class="cta-banner-text">
+              <div class="section-badge badge-dark">Private Commissions</div>
+              <h2>Commission Your Next <span class="font-serif">Architectural Masterwork</span></h2>
+              <p>
+                Our partners are currently scheduling project inquiries for the upcoming design cycle. Reach out to coordinate an introductory dialogue.
+              </p>
+            </div>
+            <div class="cta-banner-actions">
+              <a href="404.html" class="btn btn-accent">
+                <span>Inquire With Us</span>
+                <div class="btn-icon-circle"><i class="fas fa-arrow-right"></i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-top-grid">
+            <div class="footer-col-about">
+              <a href="index.html" class="site-logo" aria-label="Stackly Architecture" style="margin-bottom: 1.5rem;">
+                <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+              </a>
+              <p class="footer-about-text">
+                Sculptural architecture, parametric engineering, and bespoke luxury interior environments crafted with absolute structural fidelity.
+              </p>
+              <div class="footer-social-row">
+                <a href="404.html" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="404.html" class="social-circle" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="404.html" class="social-circle" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="404.html" class="social-circle" aria-label="Houzz"><i class="fab fa-houzz"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Navigation</h4>
+              <ul class="footer-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Client Portal</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Disciplines</h4>
+              <ul class="footer-nav-list">
+                <li><a href="services.html">Residential Villas</a></li>
+                <li><a href="services.html">Commercial Landmarks</a></li>
+                <li><a href="services.html">Spatial Interiors</a></li>
+                <li><a href="services.html">Historic Restoration</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Direct Office</h4>
+              <p class="footer-newsletter-text">
+                <i class="fas fa-map-marker-alt" style="color: var(--color-accent-secondary); width: 18px;"></i> MMR Complex, chinna tirupathi,<br>
+                <span style="display: inline-block; padding-left: 22px;">Salem, Tamil Nadu, IN 636008.</span><br>
+                <i class="fas fa-phone-alt" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> +91 9876543210<br>
+                <i class="fas fa-envelope" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> info@stackly.com
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div>&copy; 2026 Stackly Architecture Inc. All Rights Reserved.</div>
+            <div class="footer-bottom-links">
+              <a href="404.html">Privacy Framework</a>
+              <a href="404.html">Terms of Engagement</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

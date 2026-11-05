@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Command &amp; Patron Portal — STACKLY Architecture</title>
+  <meta name="description" content="Encrypted Admin Executive Command Center and Client Patron Commission Suite for Stackly Atelier.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Dashboard Styles -->
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-shell">
+    <!-- ===================================================================
+         LEFT COMMAND SIDEBAR
+         =================================================================== -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <div class="sidebar-top">
+        <!-- Brand Header with logo_0064 -->
+        <div class="sidebar-brand-header">
+          <a href="index.html" class="sidebar-brand-logo" aria-label="Stackly Architecture Home">
+            <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="brand-logo-img">
+          </a>
+          <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close Sidebar">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <!-- UNIQUE & EXCELLENT ARCHITECTURAL ROLE SELECTION SLOT -->
+        <div class="sidebar-role-slot" role="region" aria-label="Dashboard Role Selection Slot">
+          <div class="sidebar-role-slot-top">
+            <span class="sidebar-role-slot-label">
+              <i class="fas fa-sliders-h"></i>
+              <span>Active Command Slot</span>
+            </span>
+            <span class="sidebar-role-clearance-pill" id="sidebarClearancePill">TIER 01 MASTER</span>
+          </div>
+
+          <div class="sidebar-role-slot-grid">
+            <button type="button" class="role-slot-option active" data-switch-role="admin" id="sidebarSlotAdmin">
+              <div class="role-slot-option-head">
+                <i class="fas fa-user-shield"></i>
+                <span class="role-slot-dot"><i class="fas fa-circle"></i></span>
+              </div>
+              <span class="role-slot-title">Admin</span>
+              <span class="role-slot-sub">Studio Governance</span>
+            </button>
+
+            <button type="button" class="role-slot-option" data-switch-role="client" id="sidebarSlotClient">
+              <div class="role-slot-option-head">
+                <i class="fas fa-gem"></i>
+                <span class="role-slot-dot"><i class="fas fa-circle"></i></span>
+              </div>
+              <span class="role-slot-title">Client</span>
+              <span class="role-slot-sub">Patron Suite</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ADMIN NAVIGATION MODULES -->
+        <ul class="dashboard-nav-list" id="adminNavList">
+          <li>
+            <button class="dashboard-nav-btn active" data-tab="admin-overview">
+              <span class="dashboard-nav-icon"><i class="fas fa-chart-pie"></i></span>
+              <span>Executive Overview</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="admin-clients">
+              <span class="dashboard-nav-icon"><i class="fas fa-users-cog"></i></span>
+              <span>Patron &amp; Estate Registry</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="admin-bim">
+              <span class="dashboard-nav-icon"><i class="fas fa-drafting-compass"></i></span>
+              <span>CAD / BIM Governance</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="admin-materials">
+              <span class="dashboard-nav-icon"><i class="fas fa-cubes"></i></span>
+              <span>Quarry &amp; Procurement</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="admin-financials">
+              <span class="dashboard-nav-icon"><i class="fas fa-landmark"></i></span>
+              <span>Studio Treasury &amp; Draws</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- CLIENT NAVIGATION MODULES -->
+        <ul class="dashboard-nav-list" id="clientNavList" style="display: none;">
+          <li>
+            <button class="dashboard-nav-btn active" data-tab="client-overview">
+              <span class="dashboard-nav-icon"><i class="fas fa-compass"></i></span>
+              <span>My Estate Overview</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="client-blueprints">
+              <span class="dashboard-nav-icon"><i class="fas fa-layer-group"></i></span>
+              <span>3D BIM &amp; Blueprints</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="client-materials">
+              <span class="dashboard-nav-icon"><i class="fas fa-swatchbook"></i></span>
+              <span>Material &amp; FF&amp;E Palette</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="client-financials">
+              <span class="dashboard-nav-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+              <span>Escrow &amp; Disbursements</span>
+            </button>
+          </li>
+          <li>
+            <button class="dashboard-nav-btn" data-tab="client-concierge">
+              <span class="dashboard-nav-icon"><i class="fas fa-helicopter"></i></span>
+              <span>Principal Concierge</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sidebar Footer: User Session & Logout -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="user-avatar" id="sidebarUserAvatar">KV</div>
+          <div class="user-details">
+            <div class="user-name" id="sidebarUserName">Arch. Kaelen Vance</div>
+            <div class="user-role-text" id="sidebarUserRole">Founding Principal &bull; Admin</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+          <a href="index.html" class="sidebar-logout-btn" style="text-decoration: none;">
+            <i class="fas fa-home"></i>
+            <span>Main Site</span>
+          </a>
+          <button type="button" class="sidebar-logout-btn" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===================================================================
+         MAIN VIEWPORT
+         =================================================================== -->
+    <div class="dashboard-main">
+      <!-- Sticky Command Header -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobileSidebarToggle" aria-label="Open Navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="header-right">
+          <button type="button" class="btn-dash-action" id="headerPrimaryActionBtn">
+            <i class="fas fa-plus-circle"></i>
+            <span id="headerPrimaryActionText">New Commission</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- =================================================================
+           DASHBOARD CONTENT AREA
+           ================================================================= -->
+      <main class="dashboard-content-area">
+
+        <!-- ===============================================================
+             WORKSPACE 1: ADMIN DASHBOARD (STUDIO GOVERNANCE & OVERSIGHT)
+             =============================================================== -->
+        <div class="dashboard-role-workspace active-workspace" id="adminWorkspace" data-role-view="admin">
+
+          <!-- ADMIN TAB 1: EXECUTIVE OVERVIEW -->
+          <section class="tab-pane active" id="tab-admin-overview">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; LEVEL 05 PRINCIPAL COMMAND CENTER</span>
+              <h1 class="dash-view-title">Studio Executive Governance &amp; Portfolio Matrix</h1>
+            </div>
+
+            <!-- 4 Executive KPI Cards -->
+            <div class="dash-metrics-grid">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Active Commissions</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-city"></i></div>
+                </div>
+                <div class="metric-val" id="admin-metric-estates">12 Estates</div>
+                <div class="metric-sub">100% Principal-Led &bull; $142.8M Portfolio</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Studio Escrow &amp; Revenue</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-coins"></i></div>
+                </div>
+                <div class="metric-val" id="admin-metric-revenue">$18.4M</div>
+                <div class="metric-sub" style="color: #00E676;">+24.6% YoY &bull; All Q4 Retainers Cleared</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Pending BIM Sign-Offs</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-drafting-compass"></i></div>
+                </div>
+                <div class="metric-val" id="admin-metric-bim">7 Sheets</div>
+                <div class="metric-sub">3 Structural LOD 400 Awaiting Seal</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Site Safety &amp; QA Index</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                </div>
+                <div class="metric-val" id="admin-metric-qa">99.4%</div>
+                <div class="metric-sub">Zero Tolerance Structural Compliance</div>
+              </div>
+            </div>
+
+            <!-- Global Commissions Master Matrix -->
+            <div class="dash-panel-card" style="margin-bottom: 1.75rem; overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Global Commissions Master Matrix</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Real-time structural progress, patron allocation, and GMP budget governance across active estates.</span>
+                </div>
+                <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-export"></i>
+                  <span>Export Portfolio Ledger</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Commission &amp; Location</th>
+                    <th>Patron / Client</th>
+                    <th>Lead Principal</th>
+                    <th>Current Phase</th>
+                    <th>Completion</th>
+                    <th>GMP Budget</th>
+                    <th>Command Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong style="color: #FFFFFF; display: block;">Villa Aurelia</strong>
+                      <span style="font-size: 0.75rem; color: var(--dash-text-muted);">St. Moritz, Switzerland</span>
+                    </td>
+                    <td>Lord Alexander Wright</td>
+                    <td>Elena Rostova</td>
+                    <td><span class="step-status-tag tag-active">Phase 03 &bull; BIM &amp; Stone</span></td>
+                    <td style="min-width: 130px;">
+                      <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">68%</span>
+                      <div class="dash-progress-bar-wrap"><div class="dash-progress-bar-fill" style="width: 68%;"></div></div>
+                    </td>
+                    <td style="color: #FFFFFF; font-weight: 600;">$7,100,000</td>
+                    <td>
+                      <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                        <i class="fas fa-eye"></i> Inspect
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #FFFFFF; display: block;">The Horizon Villa</strong>
+                      <span style="font-size: 0.75rem; color: var(--dash-text-muted);">Malibu, California</span>
+                    </td>
+                    <td>Victoria &amp; David Sterling</td>
+                    <td>Kaelen Vance</td>
+                    <td><span class="step-status-tag tag-completed">Phase 04 &bull; Millwork</span></td>
+                    <td style="min-width: 130px;">
+                      <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">86%</span>
+                      <div class="dash-progress-bar-wrap"><div class="dash-progress-bar-fill" style="width: 86%;"></div></div>
+                    </td>
+                    <td style="color: #FFFFFF; font-weight: 600;">$14,500,000</td>
+                    <td>
+                      <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                        <i class="fas fa-check-circle"></i> Approve Draw
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #FFFFFF; display: block;">Limmat Pavilion</strong>
+                      <span style="font-size: 0.75rem; color: var(--dash-text-muted);">Zurich, Switzerland</span>
+                    </td>
+                    <td>Lumina Global Holdings</td>
+                    <td>Marcus Vance</td>
+                    <td><span class="step-status-tag tag-completed">Phase 04 &bull; Commissioning</span></td>
+                    <td style="min-width: 130px;">
+                      <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">92%</span>
+                      <div class="dash-progress-bar-wrap"><div class="dash-progress-bar-fill" style="width: 92%;"></div></div>
+                    </td>
+                    <td style="color: #FFFFFF; font-weight: 600;">$22,000,000</td>
+                    <td>
+                      <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                        <i class="fas fa-award"></i> Certify
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #FFFFFF; display: block;">Aoyama Carbon Retreat</strong>
+                      <span style="font-size: 0.75rem; color: var(--dash-text-muted);">Tokyo, Japan</span>
+                    </td>
+                    <td>Kenji Takahashi Foundation</td>
+                    <td>Sophia Chen</td>
+                    <td><span class="step-status-tag tag-active">Phase 02 &bull; Massing</span></td>
+                    <td style="min-width: 130px;">
+                      <span style="font-size: 0.78rem; font-weight: 700; color: #FFFFFF;">44%</span>
+                      <div class="dash-progress-bar-wrap"><div class="dash-progress-bar-fill" style="width: 44%;"></div></div>
+                    </td>
+                    <td style="color: #FFFFFF; font-weight: 600;">$9,800,000</td>
+                    <td>
+                      <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                        <i class="fas fa-eye"></i> Inspect
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Two Column: Studio Directorate Bandwidth & Executive Audit Log -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Atelier Directorate Bandwidth &amp; Allocation</h2>
+                  <span class="step-status-tag tag-completed">42 Architects Active</span>
+                </div>
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Structural &amp; Parametric BIM Division (Zurich)</span>
+                        <span class="step-status-tag tag-completed">94% Utilization</span>
+                      </div>
+                      <p class="step-desc">Overseeing post-tensioned cantilever calculations for Villa Aurelia &amp; Valhalla Ridge.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-gem"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Quarry &amp; Artisanal Material Curation (Pietrasanta &amp; Kyoto)</span>
+                        <span class="step-status-tag tag-active">3 Quarry Expeditions</span>
+                      </div>
+                      <p class="step-desc">Inspecting monolithic Carrara travertine blocks and charred cedar facade lots.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-leaf"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Net-Zero &amp; Geothermal Physics Lab (New York)</span>
+                        <span class="step-status-tag tag-scheduled">LEED Platinum Audits</span>
+                      </div>
+                      <p class="step-desc">Running thermal inertia simulations for Solis Oasis Sanctuary in Scottsdale.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Studio Governance Audit Stream</h2>
+                </div>
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Kaelen Vance (Admin)</strong> sealed Level 400 Structural Sheet #S-402 for <em>Villa Aurelia</em>.
+                      <span class="activity-time">18 minutes ago &bull; Zurich Command</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Escrow Treasury</strong> verified $1,250,000 Tranche #03 wire from <em>Lord Alexander Wright</em>.
+                      <span class="activity-time">2 hours ago &bull; Swiss Private Escrow</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Marcus Vance</strong> uploaded 4K LiDAR point-cloud scan for <em>Aoyama Carbon Retreat</em>.
+                      <span class="activity-time">Yesterday at 17:40 CET</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>NDA Vault</strong> issued 256-bit patron key to <em>Victoria Sterling</em> (Malibu Commission).
+                      <span class="activity-time">2 days ago &bull; Legal &amp; Compliance</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ADMIN TAB 2: PATRON & ESTATE REGISTRY -->
+          <section class="tab-pane" id="tab-admin-clients">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; CLIENTELE &amp; NDA GOVERNANCE</span>
+              <h1 class="dash-view-title">Verified Patron &amp; Commission Registry</h1>
+            </div>
+
+            <div class="dash-panel-card" style="overflow-x: auto;">
+              <div class="panel-header">
+                <h2 class="panel-title">Active High-Net-Worth Patrons &amp; Entities</h2>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-user-plus"></i>
+                  <span>Authorize New Patron Key</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Patron Name / Entity</th>
+                    <th>Assigned Estate</th>
+                    <th>NDA Covenant</th>
+                    <th>Portal Access Tier</th>
+                    <th>Contract Value</th>
+                    <th>Registry Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">Lord Alexander Wright</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">patron@stacklyatelier.com</span></td>
+                    <td>Villa Aurelia — St. Moritz</td>
+                    <td><span class="step-status-tag tag-completed">256-Bit NDA Active</span></td>
+                    <td>Tier 02 &bull; Patron Suite</td>
+                    <td style="color:#fff;font-weight:600;">$7,100,000</td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-external-link-alt"></i> Preview Patron View</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">Victoria &amp; David Sterling</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">sterling@malibuholdings.com</span></td>
+                    <td>The Horizon Villa — Malibu</td>
+                    <td><span class="step-status-tag tag-completed">Strict Media Embargo</span></td>
+                    <td>Tier 02 &bull; Patron Suite</td>
+                    <td style="color:#fff;font-weight:600;">$14,500,000</td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-paper-plane"></i> Send Dispatch</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">Harrison Vance (CEO)</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">hvance@luminaglobal.ch</span></td>
+                    <td>Limmat Pavilion — Zurich</td>
+                    <td><span class="step-status-tag tag-active">Corporate Press Cleared</span></td>
+                    <td>Tier 02 &bull; Institutional</td>
+                    <td style="color:#fff;font-weight:600;">$22,000,000</td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-folder-open"></i> Open Dossier</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">Dr. Evelyn Montgomery</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">emontgomery@artfoundation.org</span></td>
+                    <td>The Azure Penthouse — NYC</td>
+                    <td><span class="step-status-tag tag-completed">256-Bit NDA Active</span></td>
+                    <td>Tier 02 &bull; Patron Suite</td>
+                    <td style="color:#fff;font-weight:600;">$6,400,000</td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-check"></i> Sync Vault</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 2 OF PATRON & ESTATE REGISTRY: COMMISSIONED ESTATE ARCHITECTURAL DOSSIERS -->
+            <div class="materials-grid" style="margin-top: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/hero-villa.webp" alt="Villa Aurelia St. Moritz">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">ST. MORITZ, SWITZERLAND &bull; 14,200 SQ FT</div>
+                  <h3 class="material-name">Villa Aurelia Alpine Sanctuary</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Patron: Lord Alexander Wright. Monolithic granite-carved residence with cantilevered thermal pools.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-folder-open"></i> Estate Dossier
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/project-horizon-villa.webp" alt="The Horizon Villa Malibu">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">MALIBU, CALIFORNIA &bull; 18,600 SQ FT</div>
+                  <h3 class="material-name">The Horizon Cliffside Villa</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Patron: Victoria &amp; David Sterling. Pacific blufftop pavilion with board-formed limestone wings.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-folder-open"></i> Estate Dossier
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/project-lumina-pavilion.webp" alt="Limmat Pavilion Zurich">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">ZURICH, SWITZERLAND &bull; 46,000 SQ FT</div>
+                  <h3 class="material-name">Limmat Cultural Headquarters</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Patron: Lumina Global Holdings. Net-zero mass timber and low-iron glass institutional landmark.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-folder-open"></i> Estate Dossier
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/project-azure-penthouse.webp" alt="The Azure Penthouse NYC">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">MANHATTAN, NEW YORK &bull; 9,400 SQ FT</div>
+                  <h3 class="material-name">The Azure Triplex Penthouse</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Patron: Dr. Evelyn Montgomery. Museum-grade acoustic gallery residence overlooking Central Park.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-folder-open"></i> Estate Dossier
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 3 OF PATRON & ESTATE REGISTRY: NDA CRYPTOGRAPHIC GOVERNANCE & INTAKE QUEUE -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Sovereign Privacy &amp; NDA Cryptographic Protocols</h2>
+                  <span class="step-status-tag tag-completed">Zero-Knowledge Vault</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-shield-alt"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Swiss Federal Data &amp; Non-Disclosure Covenant</span>
+                        <span class="step-status-tag tag-completed">100% Enforced</span>
+                      </div>
+                      <p class="step-desc">All patron identities, floorplan vault coordinates, and security room schematics are air-gapped under Zurich cryptographic custody.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-fingerprint"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Biometric &amp; Hardware Key Telemetry Access</span>
+                        <span class="step-status-tag tag-completed">24 Keys Active</span>
+                      </div>
+                      <p class="step-desc">FIDO2 hardware security tokens issued to family office trustees and authorized estate representatives for live 4K drone feeds.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Architectural Media Embargo &amp; Monograph Redaction</span>
+                        <span class="step-status-tag tag-active">7 Estates Embargoed</span>
+                      </div>
+                      <p class="step-desc">Strict prohibition on public photography or address disclosure prior to explicit patron post-handover release authorization.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Prospective Patron &amp; Family Office Intake Queue</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Al-Thani Private Family Office (Doha / Geneva):</strong> Requested feasibility study for a 22,000 sq ft alpine sanctuary in Gstaad.
+                      <span class="activity-time">KYC &amp; Retainer Vetting &bull; Est. $19.5M GMP</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Vanguard Cultural Foundation (Kyoto):</strong> Invitational brief for a subterranean contemporary ceramic museum and tea pavilion.
+                      <span class="activity-time">Principal Review Stage &bull; Est. $28.0M GMP</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Henrik &amp; Astrid Lindqvist (Stockholm):</strong> Coastal archipelago granite villa inquiry for the 2027 commission cycle.
+                      <span class="activity-time">Site LiDAR Scheduled &bull; Est. $8.8M GMP</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-signature"></i>
+                  <span>Review Prospective Commission Dossiers</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ADMIN TAB 3: CAD / BIM GOVERNANCE & APPROVALS -->
+          <section class="tab-pane" id="tab-admin-bim">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; ISO-19650 ENGINEERING SIGN-OFF</span>
+              <h1 class="dash-view-title">CAD &amp; Level 400 BIM Principal Approval Queue</h1>
+            </div>
+
+            <div class="blueprints-grid">
+              <div class="blueprint-card">
+                <div class="blueprint-thumb-wrap" data-blueprint-modal data-img="assets/blueprint-cantilever.webp" data-title="Admin Seal Review: S-402 Post-Tensioned Cantilever Slab (Villa Aurelia)">
+                  <img src="assets/blueprint-cantilever.webp" alt="Structural Blueprint S-402" class="blueprint-thumb-img">
+                  <div class="blueprint-zoom-overlay"><span><i class="fas fa-search-plus"></i> Inspect Engineering Sheet</span></div>
+                </div>
+                <div class="blueprint-info">
+                  <div class="blueprint-meta-row">
+                    <span>SHEET S-402 &bull; REV 4.2</span>
+                    <span class="step-status-tag tag-active">Awaiting Principal Seal</span>
+                  </div>
+                  <h3 class="blueprint-title">Villa Aurelia — Cantilever Structural Tendon Matrix</h3>
+                  <div class="blueprint-actions">
+                    <button class="blueprint-download-btn" onclick="window.location.href='404.html'">
+                      <i class="fas fa-stamp"></i> Approve &amp; Seal
+                    </button>
+                    <button class="blueprint-download-btn" onclick="window.location.href='404.html'">
+                      <i class="fas fa-comment-alt"></i> Request Revision
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blueprint-card">
+                <div class="blueprint-thumb-wrap" data-blueprint-modal data-img="assets/blueprint-geothermal.webp" data-title="Admin Seal Review: M-210 Geothermal Loop & Radiant Slab (Horizon Villa)">
+                  <img src="assets/blueprint-geothermal.webp" alt="MEP Blueprint M-210" class="blueprint-thumb-img">
+                  <div class="blueprint-zoom-overlay"><span><i class="fas fa-search-plus"></i> Inspect Engineering Sheet</span></div>
+                </div>
+                <div class="blueprint-info">
+                  <div class="blueprint-meta-row">
+                    <span>SHEET M-210 &bull; REV 3.0</span>
+                    <span class="step-status-tag tag-completed">Principal Sealed</span>
+                  </div>
+                  <h3 class="blueprint-title">The Horizon Villa — Geothermal Hydronic Schematic</h3>
+                  <div class="blueprint-actions">
+                    <button class="blueprint-download-btn" onclick="window.location.href='404.html'">
+                      <i class="fas fa-download"></i> Download IFC / DWG
+                    </button>
+                    <span style="font-size: 0.75rem; color: #00E676;"><i class="fas fa-check-circle"></i> Signed by M. Vance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 OF CAD / BIM GOVERNANCE: ISO-19650 CLASH DETECTION & TOLERANCE MATRIX -->
+            <div class="dash-panel-card" style="margin-top: 1.75rem; margin-bottom: 1.75rem; overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">ISO-19650 Federated BIM Clash Detection &amp; Tolerance Matrix</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Automated Navisworks &amp; Rhino.Inside.Revit millimeter clash audits across structural, MEP, and façade disciplines.</span>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-cubes"></i>
+                  <span>Run Federated Clash Audit</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Model / Sheet ID</th>
+                    <th>Commission &amp; Discipline</th>
+                    <th>Lead Structural Partner</th>
+                    <th>Tolerance Spec</th>
+                    <th>Clash Audit Status</th>
+                    <th>BIM Governance Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">#BIM-S402-R4</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Villa Aurelia — Post-Tensioned Cantilever</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Structural Steel &amp; Tendon Matrix</span>
+                    </td>
+                    <td>Marcus Vance</td>
+                    <td style="color:#fff;font-weight:600;">&plusmn; 0.4 mm</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-stamp"></i> Awaiting Principal Seal</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-signature"></i> Seal Sheet</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#BIM-M210-R3</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">The Horizon Villa — Geothermal Hydronics</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">MEP &amp; Sub-Slab Radiant Loops</span>
+                    </td>
+                    <td>Elena Rostova</td>
+                    <td style="color:#fff;font-weight:600;">&plusmn; 0.8 mm</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Zero Clashes Verified</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> Export IFC</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#BIM-F108-R6</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Limmat Pavilion — Kinetic Solar Louvers</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Parametric Façade &amp; Curtain Wall</span>
+                    </td>
+                    <td>Kaelen Vance</td>
+                    <td style="color:#fff;font-weight:600;">&plusmn; 0.2 mm</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> CNC Fabrication Ready</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-drafting-compass"></i> Inspect 3D</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#BIM-A504-R2</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Aoyama Retreat — Seismic Base Isolators</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Subterranean Foundation &amp; Dampers</span>
+                    </td>
+                    <td>Julian Mercer</td>
+                    <td style="color:#fff;font-weight:600;">&plusmn; 0.5 mm</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-shield-alt"></i> Magnitude 8.5 Certified</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-pdf"></i> Calc Book</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 3 OF CAD / BIM GOVERNANCE: FINITE ELEMENT SIMULATIONS & MUNICIPAL CODE SIGN-OFFS -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Parametric Structural &amp; Environmental Simulations</h2>
+                  <span class="step-status-tag tag-completed">ETH Zurich Validated</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Finite Element Snow-Load &amp; Cantilever Deflection Analysis</span>
+                        <span class="step-status-tag tag-completed">Safety Factor 3.4x</span>
+                      </div>
+                      <p class="step-desc">Simulated 4.5-meter alpine snow accumulation and 180 km/h Föhn wind shear on Villa Aurelia’s 40-foot cantilevered concrete wing.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Solar Azimuth &amp; Daylight Autonomy Raytracing</span>
+                        <span class="step-status-tag tag-completed">Zero Glare Verified</span>
+                      </div>
+                      <p class="step-desc">Annual solstice-to-equinox raytracing completed to calibrate deep roof overhangs and subterranean zenith light cannons.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-wave-square"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Acoustic Reverberation &amp; Helmholtz Baffle Modeling</span>
+                        <span class="step-status-tag tag-active">RT60 &lt; 0.38s</span>
+                      </div>
+                      <p class="step-desc">Parametric micro-perforation mapping for The Azure Penthouse double-height travertine gallery ceilings.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Municipal Zoning &amp; Structural Code Clearances</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Graubünden Cantonal Building Authority (Switzerland):</strong> Final structural &amp; geothermal borehole permit #GR-2026-441 stamped without conditions.
+                      <span class="activity-time">Approved &bull; Villa Aurelia St. Moritz</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>California Coastal Commission (Malibu):</strong> Blufftop setback, marine foundation caissons, and dark-sky lighting variance unanimously cleared.
+                      <span class="activity-time">Approved &bull; The Horizon Villa</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Minato-ku Seismic Review Board (Tokyo):</strong> Peer-review certification granted for subterranean elastomeric lead-rubber base isolators.
+                      <span class="activity-time">Approved &bull; Aoyama Carbon Retreat</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-folder-plus"></i>
+                  <span>Upload New Revision Package to BIM Vault</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ADMIN TAB 4: QUARRY & MATERIAL PROCUREMENT -->
+          <section class="tab-pane" id="tab-admin-materials">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; GLOBAL ARTISANAL SUPPLY CHAIN</span>
+              <h1 class="dash-view-title">Quarry Block Reservations &amp; Material Logistics</h1>
+            </div>
+
+            <div class="materials-grid">
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/project-valhalla-ridge.webp" alt="Carrara Travertine Block">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">PIETRASANTA, ITALY &bull; LOT #884</div>
+                  <h3 class="material-name">Bush-Hammered Travertine</h3>
+                  <p class="material-desc">42 metric tons reserved for Villa Aurelia atrium walls. Customs cleared for Swiss Alpine transit.</p>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/blog-charred-cedar.webp" alt="Kyoto Yakisugi Cedar">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">KYOTO, JAPAN &bull; LOT #319</div>
+                  <h3 class="material-name">Kiln-Charred Yakisugi Cedar</h3>
+                  <p class="material-desc">Hand-charred by master guild in Kyoto. Allocated to Aoyama Carbon Retreat &amp; St. Moritz roof soffits.</p>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/interior-detail.webp" alt="Swiss Glazing">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">ZURICH, SWITZERLAND &bull; LOT #105</div>
+                  <h3 class="material-name">Triple-Glazed Low-Iron Curtain</h3>
+                  <p class="material-desc">18-foot motorized thermal panes with zero-sightline bronze mullions. In fabrication.</p>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/service-interior.webp" alt="Oxidized Architectural Bronze">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">MILAN, ITALY &bull; LOT #512</div>
+                  <h3 class="material-name">Oxidized Architectural Bronze</h3>
+                  <p class="material-desc">Custom-cast pivot doors, stair stringers, and concealed linear light baffles across 4 estates.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 OF QUARRY & PROCUREMENT: GLOBAL FREIGHT & CUSTOMS TELEMETRY LEDGER -->
+            <div class="dash-panel-card" style="margin-top: 1.75rem; margin-bottom: 1.75rem; overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Global Quarry Freight &amp; Customs Telemetry Ledger</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Live crating, customs clearance, and climate-controlled transit tracking from quarry face to estate site.</span>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-truck-loading"></i>
+                  <span>Reserve New Quarry Lot</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Lot / Manifest ID</th>
+                    <th>Material &amp; Quarry Origin</th>
+                    <th>Allocated Commission</th>
+                    <th>Reserved Volume</th>
+                    <th>Logistics &amp; Customs Status</th>
+                    <th>Procurement Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">#LOT-884-IT</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Bush-Hammered Travertine</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Pietrasanta Quarry Basin, Italy</span>
+                    </td>
+                    <td>Villa Aurelia — St. Moritz</td>
+                    <td style="color:#fff;font-weight:600;">42.0 Metric Tons</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-shipping-fast"></i> Cleared Gotthard Customs</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-contract"></i> Manifest</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#LOT-319-JP</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Kiln-Charred Yakisugi Cedar</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Kitayama Forestry Guild, Kyoto</span>
+                    </td>
+                    <td>Aoyama Carbon Retreat — Tokyo</td>
+                    <td style="color:#fff;font-weight:600;">1,850 Linear Meters</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Delivered to Site Vault</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-certificate"></i> Mill Cert</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#LOT-105-CH</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Triple-Glazed Low-Iron Curtain</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Winterthur Glassworks, Switzerland</span>
+                    </td>
+                    <td>Limmat Pavilion — Zurich</td>
+                    <td style="color:#fff;font-weight:600;">24 Monolithic Panes</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-cogs"></i> Autoclave Curing (85%)</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-microscope"></i> QA Audit</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#LOT-512-IT</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Oxidized Architectural Bronze</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Fonderia Artistica, Milan</span>
+                    </td>
+                    <td>The Horizon Villa — Malibu</td>
+                    <td style="color:#fff;font-weight:600;">6.4 Metric Tons</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-plane-departure"></i> Air-Freight Crating</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-route"></i> Track Airway</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 3 OF QUARRY & PROCUREMENT: PETROGRAPHIC LAB AUDITS & ARTISAN GUILD CONCESSIONS -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Petrographic &amp; Structural Material Lab Audits</h2>
+                  <span class="step-status-tag tag-completed">ISO-17025 Verified</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Ultrasonic Stone Vein &amp; Fissure Tomography (Lot #884)</span>
+                        <span class="step-status-tag tag-completed">99.8% Pure</span>
+                      </div>
+                      <p class="step-desc">Zero internal micro-fractures detected across all 38 Pietrasanta travertine blocks; freeze-thaw resistance certified for 1,850m alpine elevation.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Yakisugi Carbonization Depth &amp; Flame Spread Test (Lot #319)</span>
+                        <span class="step-status-tag tag-completed">Class-A Rated</span>
+                      </div>
+                      <p class="step-desc">4.2mm uniform char layer verified by Kyoto laboratory; natural cypress oil seal applied for 80-year UV and moisture immunity.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-flask"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Spectrophotometric &amp; Acoustic Glazing Calibration (Lot #105)</span>
+                        <span class="step-status-tag tag-active">0.48 W/m&sup2;K</span>
+                      </div>
+                      <p class="step-desc">Argon-krypton cavity pressure and 48dB acoustic attenuation verified for 18-foot motorized curtain wall assemblies.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Exclusive Quarry Concessions &amp; Artisan Guilds</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Cava Michelangelo (Pietrasanta, Italy):</strong> Tier-01 principal right of first refusal on monolithic statuario and porous travertine veins.
+                      <span class="activity-time">Retainer Active &bull; Next Quarry Visit: Dec 04, 2026</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Kitayama Master Timberwrights (Kyoto, Japan):</strong> Sustainable FSC-certified 120-year-old Japanese cedar and hinoki cypress joinery billets.
+                      <span class="activity-time">Guild Allocation: 100% Reserved for Stackly</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Fonderia Brambilla (Milan, Italy):</strong> Bespoke lost-wax architectural bronze casting, hand-rubbed living patina hardware, and monumental pivot doors.
+                      <span class="activity-time">Lead Time: 8 Weeks &bull; 4 Commissions Active</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-compass"></i>
+                  <span>Schedule Principal Quarry Expedition</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ADMIN TAB 5: STUDIO TREASURY & ESCROW LEDGERS -->
+          <section class="tab-pane" id="tab-admin-financials">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; FINANCIAL STEWARDSHIP &amp; GMP AUDITS</span>
+              <h1 class="dash-view-title">Studio Treasury &amp; Construction Draw Authorizations</h1>
+            </div>
+
+            <div class="dash-panel-card" style="overflow-x: auto;">
+              <div class="panel-header">
+                <h2 class="panel-title">Escrow Tranche Ledger Across Commissions</h2>
+                <button class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                  <span>Issue Milestone Draw</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Draw ID</th>
+                    <th>Commission</th>
+                    <th>Milestone Description</th>
+                    <th>Tranche Amount</th>
+                    <th>Audit Status</th>
+                    <th>Treasury Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#DRW-2026-89</td>
+                    <td><strong style="color:#fff;">Villa Aurelia</strong></td>
+                    <td>Phase 03: Structural Glazing &amp; Stone Quarry Delivery</td>
+                    <td style="color:#fff;font-weight:700;">$1,250,000</td>
+                    <td><span class="step-status-tag tag-completed">Cleared in Escrow</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>#DRW-2026-92</td>
+                    <td><strong style="color:#fff;">The Horizon Villa</strong></td>
+                    <td>Phase 04: Bespoke Millwork &amp; Infinity Weir Pool</td>
+                    <td style="color:#fff;font-weight:700;">$2,100,000</td>
+                    <td><span class="step-status-tag tag-active">Pending Principal Release</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-signature"></i> Authorize Wire</button></td>
+                  </tr>
+                  <tr>
+                    <td>#DRW-2026-95</td>
+                    <td><strong style="color:#fff;">Aoyama Carbon Retreat</strong></td>
+                    <td>Phase 02: Subterranean Seismic Base Isolation</td>
+                    <td style="color:#fff;font-weight:700;">$1,680,000</td>
+                    <td><span class="step-status-tag tag-completed">Cleared in Escrow</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> Receipt</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 2 OF STUDIO TREASURY & DRAWS: TREASURY CAPITAL & ESCROW LIQUIDITY METRICS -->
+            <div class="dash-metrics-grid" style="margin-top: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Total GMP Under Custody</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-landmark"></i></div>
+                </div>
+                <div class="metric-val">$142.8M</div>
+                <div class="metric-sub">Across 12 Active Global Commissions</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Escrow Reserve Liquidity</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                </div>
+                <div class="metric-val">$38.4M</div>
+                <div class="metric-sub" style="color: #00E676;"> Ring-Fenced in Zurich Custodial Accounts</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Pending Draw Releases</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-file-signature"></i></div>
+                </div>
+                <div class="metric-val">$3.78M</div>
+                <div class="metric-sub">2 Milestone Tranches Awaiting Seal</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">GMP Cost Variance</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-balance-scale"></i></div>
+                </div>
+                <div class="metric-val">0.00%</div>
+                <div class="metric-sub" style="color: #00E676;">100% Fixed-Price Contract Compliance</div>
+              </div>
+            </div>
+
+            <!-- SECTION 3 OF STUDIO TREASURY & DRAWS: QUANTITY SURVEYOR AUDITS & BANKING CUSTODIANS -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Independent Quantity Surveyor (QS) Verification Protocol</h2>
+                  <span class="step-status-tag tag-completed">RICS Certified</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Q3 Structural &amp; Quarry Procurement Reconciliation</span>
+                        <span class="step-status-tag tag-completed">Audited &amp; Closed</span>
+                      </div>
+                      <p class="step-desc">100% of raw material invoices and subcontractor valuations verified against laser-scanned site completion percentages.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Currency Hedge &amp; Multi-Jurisdiction Tax Clearance</span>
+                        <span class="step-status-tag tag-completed">CHF / USD / JPY Locked</span>
+                      </div>
+                      <p class="step-desc">Forward currency contracts locked for Italian stone and Japanese timber imports to insulate patrons from FX volatility.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-coins"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Q4 Milestone Tranche #04 Valuation Window</span>
+                        <span class="step-status-tag tag-active">In Review</span>
+                      </div>
+                      <p class="step-desc">On-site quantity surveyors inspecting Malibu millwork and St. Moritz glazing prior to principal wire sign-off.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Sovereign Escrow Custodians &amp; Treasury Dispatches</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Julius Baer Private Escrow (Zurich):</strong> Confirmed receipt of $1,250,000 Tranche #03 wire for Villa Aurelia stone cladding.
+                      <span class="activity-time">Cleared via SWIFT &bull; Vault Ref #JB-99412</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>J.P. Morgan Private Bank (New York):</strong> Issued Letter of Credit #LC-8820 for The Horizon Villa custom bronze curtain wall fabrication.
+                      <span class="activity-time">2 days ago &bull; Americas Directorate Treasury</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sumitomo Mitsui Trust (Tokyo):</strong> Released ¥245,000,000 seismic base-isolation milestone draw for Aoyama Carbon Retreat.
+                      <span class="activity-time">4 days ago &bull; Tokyo Directorate Treasury</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>Download Consolidated Q4 Treasury Audit Report</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ===============================================================
+             WORKSPACE 2: CLIENT DASHBOARD (PATRON COMMISSION SUITE)
+             =============================================================== -->
+        <div class="dashboard-role-workspace" id="clientWorkspace" data-role-view="client">
+
+          <!-- CLIENT TAB 1: MY ESTATE OVERVIEW -->
+          <section class="tab-pane active" id="tab-client-overview">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; PRIVATE PATRON COMMISSION SUITE</span>
+              <h1 class="dash-view-title">My Residence Progress &amp; Live Site Telemetry</h1>
+            </div>
+
+            <!-- 4 Patron KPI Cards -->
+            <div class="dash-metrics-grid">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Overall Completion</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-tasks"></i></div>
+                </div>
+                <div class="metric-val" id="metric-progress-val">68%</div>
+                <div class="metric-sub">Phase 03: Stone &amp; Thermal Glazing</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Turnkey Handover</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-calendar-check"></i></div>
+                </div>
+                <div class="metric-val" id="metric-days-val">184 Days</div>
+                <div class="metric-sub" style="color: #00E676;">On Schedule &bull; Target May 2027</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Escrow Disbursed</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-wallet"></i></div>
+                </div>
+                <div class="metric-val" id="metric-budget-val">$4,850,000</div>
+                <div class="metric-sub">Fixed-Price GMP Protected</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Ecological Standard</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-leaf"></i></div>
+                </div>
+                <div class="metric-val">Net-Zero</div>
+                <div class="metric-sub">LEED Platinum &amp; Minergie-P</div>
+              </div>
+            </div>
+
+            <!-- Live 4K Drone & Biometric Site Telemetry Hero Card -->
+            <div class="dash-hero-card">
+              <img src="assets/hero-villa.webp" 
+                   alt="Villa Aurelia St. Moritz Live Feed" 
+                   class="dash-hero-bg">
+              <div class="dash-hero-overlay"></div>
+
+              <div class="dash-hero-content">
+                <div class="dash-live-badge">
+                  <span class="live-pulse-dot"></span>
+                  <span>LIVE 4K DRONE &amp; BIOMETRIC SITE FEED &bull; CAM 02 SOUTH CANTILEVER</span>
+                </div>
+              </div>
+
+              <div class="dash-hero-content" style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h2 class="dash-hero-title">Villa Aurelia</h2>
+                  <p class="dash-hero-desc">
+                    St. Moritz, Switzerland — Monolithic alpine sanctuary carved into granite terrain with zero-edge thermal pools and cantilevered cedar roofs.
+                  </p>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-vr-cardboard"></i>
+                  <span>Launch 3D Digital Twin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Two Column: 5-Phase Milestone Tracker & Principal Notes -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Architectural Conception &amp; Build Milestones</h2>
+                  <span class="step-status-tag tag-active">Phase 03 Active</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Phase 01: Site Forensic &amp; Geological LiDAR Audit</span>
+                        <span class="step-status-tag tag-completed">Completed</span>
+                      </div>
+                      <p class="step-desc">Subterranean granite mapping, solar azimuth studies, and municipal zoning approval completed.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-check"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Phase 02: Monolithic Board-Formed Concrete Massing</span>
+                        <span class="step-status-tag tag-completed">Completed</span>
+                      </div>
+                      <p class="step-desc">Post-tensioned 40-foot cantilever living wing poured and cured to micron-level tolerances.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle">03</div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Phase 03: Pietrasanta Stone Cladding &amp; Swiss Glazing</span>
+                        <span class="step-status-tag tag-active">In Progress (68%)</span>
+                      </div>
+                      <p class="step-desc">Installing triple-glazed motorized curtain walls and bush-hammered travertine atrium slabs.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item">
+                    <div class="step-node-col">
+                      <div class="step-circle">04</div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Phase 04: Artisanal Joinery, Circadian Lighting &amp; Handover</span>
+                        <span class="step-status-tag tag-scheduled">Scheduled Q1 2027</span>
+                      </div>
+                      <p class="step-desc">Custom white oak cabinetry, concealed acoustic ceilings, and final turnkey commissioning.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Dispatches From Your Principals</h2>
+                </div>
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Elena Rostova (Lead Architect):</strong> &ldquo;The Pietrasanta travertine slabs arrived on site this morning. The raking afternoon light across the stone grain is extraordinary.&rdquo;
+                      <span class="activity-time">2 hours ago &bull; St. Moritz Site</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Marcus Vance (Structural Partner):</strong> &ldquo;Cantilever deflection sensors confirm 0.02mm stability under simulated alpine snow loads.&rdquo;
+                      <span class="activity-time">Yesterday &bull; BIM Engineering</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sophia Chen (Interior Director):</strong> &ldquo;Uploaded 4 tactile bronze &amp; smoked oak samples to your Material Palette tab for your sign-off.&rdquo;
+                      <span class="activity-time">3 days ago &bull; Interior Atelier</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CLIENT TAB 2: 3D BIM & BLUEPRINTS VAULT -->
+          <section class="tab-pane" id="tab-client-blueprints">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; ENCRYPTED ARCHITECTURAL DRAWINGS</span>
+              <h1 class="dash-view-title">My Residence 3D BIM &amp; Blueprints Vault</h1>
+            </div>
+
+            <div class="blueprints-grid">
+              <div class="blueprint-card">
+                <div class="blueprint-thumb-wrap" data-blueprint-modal data-img="assets/blueprint-cantilever.webp" data-title="Sheet A-101: Main Cantilever Level Floorplan — Villa Aurelia">
+                  <img src="assets/blueprint-cantilever.webp" alt="Floorplan Sheet A-101" class="blueprint-thumb-img">
+                  <div class="blueprint-zoom-overlay"><span><i class="fas fa-expand"></i> Click to Inspect Full Blueprint</span></div>
+                </div>
+                <div class="blueprint-info">
+                  <div class="blueprint-meta-row">
+                    <span>SHEET A-101 &bull; SCALE 1:50</span>
+                    <span class="step-status-tag tag-completed">Principal Sealed</span>
+                  </div>
+                  <h3 class="blueprint-title">Main Cantilever Level &amp; Atrium Choreography</h3>
+                  <div class="blueprint-actions">
+                    <button class="blueprint-download-btn" onclick="window.location.href='404.html'">
+                      <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                    <span style="font-size: 0.75rem; color: var(--dash-text-muted);">Updated Oct 2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blueprint-card">
+                <div class="blueprint-thumb-wrap" data-blueprint-modal data-img="assets/blueprint-geothermal.webp" data-title="Sheet A-304: Subterranean Thermal Spa & Light-Cannon Section">
+                  <img src="assets/blueprint-geothermal.webp" alt="Section Sheet A-304" class="blueprint-thumb-img">
+                  <div class="blueprint-zoom-overlay"><span><i class="fas fa-expand"></i> Click to Inspect Full Blueprint</span></div>
+                </div>
+                <div class="blueprint-info">
+                  <div class="blueprint-meta-row">
+                    <span>SHEET A-304 &bull; SECTION AA</span>
+                    <span class="step-status-tag tag-completed">Principal Sealed</span>
+                  </div>
+                  <h3 class="blueprint-title">Subterranean Thermal Spa &amp; Zenith Light-Scoop</h3>
+                  <div class="blueprint-actions">
+                    <button class="blueprint-download-btn" onclick="window.location.href='404.html'">
+                      <i class="fas fa-file-pdf"></i> Download PDF
+                    </button>
+                    <span style="font-size: 0.75rem; color: var(--dash-text-muted);">Updated Oct 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 OF 3D BIM & BLUEPRINTS: ARCHITECTURAL DRAWING REGISTER -->
+            <div class="dash-panel-card" style="margin-top: 1.75rem; margin-bottom: 1.75rem; overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Master Architectural Drawing &amp; Level 400 BIM Register</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Complete index of sealed floorplans, structural sections, and custom millwork shop drawings for Villa Aurelia.</span>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-archive"></i>
+                  <span>Download Full Blueprint Archive</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Sheet Code</th>
+                    <th>Architectural Zone &amp; Drawing Title</th>
+                    <th>Scale &amp; Discipline</th>
+                    <th>Revision</th>
+                    <th>Seal Status</th>
+                    <th>Vault Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">SHEET A-101</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Main Cantilever Level &amp; Atrium Choreography</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Living Salon, Infinity Terrace &amp; Gallery Wing</span>
+                    </td>
+                    <td>1:50 &bull; Architectural</td>
+                    <td style="color:#fff;font-weight:600;">Rev 4.2</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Principal Sealed</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> CAD / PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">SHEET A-304</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Subterranean Thermal Spa &amp; Zenith Light-Scoop</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Granite Hammam, Plunge Pool &amp; Parabolic Skylight</span>
+                    </td>
+                    <td>1:25 &bull; Section AA</td>
+                    <td style="color:#fff;font-weight:600;">Rev 3.8</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Principal Sealed</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> CAD / PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">SHEET S-402</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Post-Tensioned Cantilever Tendon Matrix</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">40-Foot Overhang Anchor &amp; Alpine Snow Load Grid</span>
+                    </td>
+                    <td>1:20 &bull; Structural</td>
+                    <td style="color:#fff;font-weight:600;">Rev 4.0</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> ETH Validated</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> CAD / PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">SHEET ID-610</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Private Wine Vault &amp; Oxidized Bronze Joinery</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Climate-Controlled Sommelier Tasting Room Millwork</span>
+                    </td>
+                    <td>1:10 &bull; Interior Detail</td>
+                    <td style="color:#fff;font-weight:600;">Rev 2.1</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-compass"></i> Patron Review</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-eye"></i> Inspect</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 3 OF 3D BIM & BLUEPRINTS: DIGITAL TWIN LAYERS & ENGINEERING REVISIONS -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Interactive 3D Digital Twin Telemetry Layers</h2>
+                  <span class="step-status-tag tag-completed">Unreal Engine 5 Live</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-sun"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Real-Time Alpine Solar &amp; Shadow Choreography</span>
+                        <span class="step-status-tag tag-completed">Calibrated</span>
+                      </div>
+                      <p class="step-desc">Simulate exact natural daylight penetration across the Pietrasanta travertine gallery walls for any hour and season of the year.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-fire"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Sub-Slab Geothermal &amp; Radiant Airflow Overlay</span>
+                        <span class="step-status-tag tag-completed">Active Layer</span>
+                      </div>
+                      <p class="step-desc">X-ray visualization of concealed hydronic floor loops, heat-recovery ventilation ducts, and snow-melt terrace zones.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-vr-cardboard"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">1:1 Spatial VR Headset Walkthrough Package</span>
+                        <span class="step-status-tag tag-active">Ready for Stream</span>
+                      </div>
+                      <p class="step-desc">Walk through the Master Suite, Subterranean Spa, and Cantilever Terrace in photorealistic 8K resolution from your private study.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Recent Blueprint Revisions &amp; Principal Sign-Offs</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sheet A-101 (Rev 4.2):</strong> Widened south cantilever glass pocket by 180mm to frame uninterrupted views of Piz Bernina.
+                      <span class="activity-time">Sealed by Elena Rostova &bull; 3 days ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sheet ID-610 (Rev 2.1):</strong> Integrated concealed museum-grade 2700K optic fiber lighting into the limestone wine vault niches.
+                      <span class="activity-time">Sealed by Sophia Chen &bull; 1 week ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sheet S-402 (Rev 4.0):</strong> Upgraded post-tensioning titanium anchor tendons for zero-vibration acoustic isolation.
+                      <span class="activity-time">Sealed by Marcus Vance &bull; 2 weeks ago</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-comment-dots"></i>
+                  <span>Submit Blueprint Annotation to Lead Architect</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- CLIENT TAB 3: MATERIAL & FF&E PALETTE -->
+          <section class="tab-pane" id="tab-client-materials">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; BESPOKE SENSORY CURATION</span>
+              <h1 class="dash-view-title">Curated Material &amp; FF&amp;E Palette For Your Estate</h1>
+            </div>
+
+            <div class="materials-grid">
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/blog-travertine.webp" alt="Pietrasanta Travertine">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">ATRIUM &amp; GALLERY WALLS</div>
+                  <h3 class="material-name">Bush-Hammered Travertine</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Unfilled natural porous limestone quarried in Tuscany for warm raking shadow play.</p>
+                  <span class="step-status-tag tag-completed"><i class="fas fa-check"></i> Approved by Patron</span>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/blog-charred-cedar.webp" alt="Charred Alpine Larch">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">EXTERIOR SOFFITS &amp; CLADDING</div>
+                  <h3 class="material-name">Shou Sugi Ban Alpine Larch</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Deep carbon-charred timber providing natural weatherproofing and velvety matte texture.</p>
+                  <span class="step-status-tag tag-completed"><i class="fas fa-check"></i> Approved by Patron</span>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/service-interior.webp" alt="Oxidized Bronze">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">MONOLITHIC KITCHEN &amp; DOORS</div>
+                  <h3 class="material-name">Hand-Rubbed Oxidized Bronze</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Living patina metalwork custom fabricated in Milan for culinary islands and pivot hardware.</p>
+                  <button class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-check-circle"></i> Approve Sample
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/blog-acoustics.webp" alt="Acoustic White Oak">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">MASTER SUITE &amp; CEILINGS</div>
+                  <h3 class="material-name">Slatted Smoked White Oak</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Kiln-dried European oak backed with Helmholtz acoustic felt for total sonic serenity.</p>
+                  <span class="step-status-tag tag-completed"><i class="fas fa-check"></i> Approved by Patron</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 OF MATERIAL & FF&E PALETTE: BESPOKE FURNITURE & JOINERY SCHEDULE -->
+            <div class="dash-panel-card" style="margin-top: 1.75rem; margin-bottom: 1.75rem; overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Bespoke FF&amp;E, Artisanal Joinery &amp; Luminaire Schedule</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Custom-commissioned furniture editions, monolithic stone fixtures, and architectural lighting fabricated for Villa Aurelia.</span>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-swatchbook"></i>
+                  <span>Download Full FF&amp;E Dossier</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>FF&amp;E Code</th>
+                    <th>Bespoke Piece &amp; Atelier Guild</th>
+                    <th>Residence Zone</th>
+                    <th>Primary Tactile Finish</th>
+                    <th>Fabrication Status</th>
+                    <th>Curation Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">#FFE-104</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">14-Foot Monolithic Cantilever Dining Table</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Carved from a single Pietrasanta block &bull; Tuscany</span>
+                    </td>
+                    <td>Main Cantilever Salon</td>
+                    <td style="color:#fff;font-weight:600;">Honed Travertine &amp; Bronze</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Crated for Delivery</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-alt"></i> Spec Sheet</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#FFE-218</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Hand-Cast Oxidized Bronze Culinary Island</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Fonderia Brambilla &bull; Milan, Italy</span>
+                    </td>
+                    <td>Chef’s Exhibition Kitchen</td>
+                    <td style="color:#fff;font-weight:600;">Living Patina Bronze</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-hammer"></i> Artisan Patination</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-check"></i> Sign Off</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#FFE-309</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Custom Low-Slung Bouclé &amp; Saddle Leather Lounge</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Stackly Interior Atelier &bull; Zurich</span>
+                    </td>
+                    <td>Hearth &amp; Library Sanctuary</td>
+                    <td style="color:#fff;font-weight:600;">Raw Alpine Wool &amp; Oak</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Approved by Patron</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-alt"></i> Spec Sheet</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">#FFE-412</strong></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Subterranean Monolith Soaking Vessel</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">CNC-Hollowed Vals Quartzite Block &bull; Graubünden</span>
+                    </td>
+                    <td>Thermal Spa Sanctuary</td>
+                    <td style="color:#fff;font-weight:600;">Thermal Vals Stone</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Installed On-Site</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-camera"></i> View Photo</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 3 OF MATERIAL & FF&E PALETTE: CIRCADIAN LIGHTING & PHYSICAL SAMPLE BOX -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Sensory &amp; Circadian Lighting Choreography</h2>
+                  <span class="step-status-tag tag-completed"> Lutron HomeWorks QS</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-sun"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Scene 01: Alpine Dawn &amp; Zenith Awakening (5000K to 3500K)</span>
+                        <span class="step-status-tag tag-completed">Programmed</span>
+                      </div>
+                      <p class="step-desc">Motorized sheer linen draperies part silently at sunrise while indirect cove luminaires mirror natural alpine sky spectrums.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-moon"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Scene 02: Twilight Limestone Grazing (2400K Warm Amber)</span>
+                        <span class="step-status-tag tag-completed">Programmed</span>
+                      </div>
+                      <p class="step-desc">Concealed floor-recessed micro-louvers graze the bush-hammered travertine walls, turning the residence into a glowing lantern at dusk.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-water"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Scene 03: Subterranean Spa Caustic Water Reflections (1800K)</span>
+                        <span class="step-status-tag tag-active">Calibrating On-Site</span>
+                      </div>
+                      <p class="step-desc">Refracted underwater bronze optics project gentle kinetic ripple patterns across the raw concrete spa vault ceiling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Physical Tactile Sample Box Courier Log</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sample Presentation Box #04 (Dispatched via DHL Private Courier):</strong> Hand-rubbed oxidized bronze plates, smoked white oak slats, and raw alpaca bouclé swatches delivered to your Geneva residence.
+                      <span class="activity-time">Signed by Patron Office &bull; Oct 29, 2026</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Sample Presentation Box #03 (Approved):</strong> Pietrasanta bush-hammered travertine core cut and Shou Sugi Ban charred larch exterior board approved without modification.
+                      <span class="activity-time">Archived in Commission Vault &bull; Sep 14, 2026</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Upcoming Sample Box #05 (In Preparation):</strong> Custom Vals quartzite spa stone honing variations and hand-blown Murano glass pendant diffusers.
+                      <span class="activity-time">Scheduled Dispatch: Nov 12, 2026</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-box-open"></i>
+                  <span>Request Additional Tactile Material Swatches</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- CLIENT TAB 4: ESCROW & MILESTONE DISBURSEMENTS -->
+          <section class="tab-pane" id="tab-client-financials">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; TRANSPARENT FIXED-PRICE GMP LEDGER</span>
+              <h1 class="dash-view-title">My Commission Escrow &amp; Milestone Schedule</h1>
+            </div>
+
+            <div class="dash-panel-card" style="overflow-x: auto;">
+              <div class="panel-header">
+                <h2 class="panel-title">Villa Aurelia — Guaranteed Maximum Price ($7,100,000)</h2>
+                <button class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                  <i class="fas fa-download"></i> Download Statement
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Tranche</th>
+                    <th>Architectural Milestone</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Certificate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tranche 01</td>
+                    <td>Schematic Conception, LiDAR Audit &amp; Permits</td>
+                    <td>Jan 15, 2026</td>
+                    <td style="color:#fff;font-weight:600;">$1,400,000</td>
+                    <td><span class="step-status-tag tag-completed">Disbursed</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-pdf"></i> Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>Tranche 02</td>
+                    <td>Subterranean Excavation &amp; Post-Tensioned Concrete</td>
+                    <td>Jun 10, 2026</td>
+                    <td style="color:#fff;font-weight:600;">$2,200,000</td>
+                    <td><span class="step-status-tag tag-completed">Disbursed</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-pdf"></i> Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>Tranche 03</td>
+                    <td>Pietrasanta Stone Cladding &amp; Swiss Thermal Glazing</td>
+                    <td>Oct 28, 2026</td>
+                    <td style="color:#fff;font-weight:600;">$1,250,000</td>
+                    <td><span class="step-status-tag tag-completed">Disbursed</span></td>
+                    <td><button class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-file-pdf"></i> Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>Tranche 04</td>
+                    <td>Bespoke Millwork, Lighting &amp; Turnkey Consecration</td>
+                    <td>Feb 15, 2027</td>
+                    <td style="color:#fff;font-weight:600;">$2,250,000</td>
+                    <td><span class="step-status-tag tag-scheduled">Scheduled</span></td>
+                    <td><span style="font-size:0.75rem;color:var(--dash-text-muted);">Upon Phase 04 Completion</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SECTION 2 OF ESCROW & DISBURSEMENTS: PATRON GMP PROTECTION METRICS -->
+            <div class="dash-metrics-grid" style="margin-top: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Guaranteed Max Price</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-file-contract"></i></div>
+                </div>
+                <div class="metric-val">$7,100,000</div>
+                <div class="metric-sub">Locked Fixed-Price Turnkey Covenant</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Disbursed to Date</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-check-double"></i></div>
+                </div>
+                <div class="metric-val">$4,850,000</div>
+                <div class="metric-sub" style="color: #00E676;">Tranches 01, 02 &amp; 03 Fully Cleared</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Remaining in Escrow</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-university"></i></div>
+                </div>
+                <div class="metric-val">$2,250,000</div>
+                <div class="metric-sub">Held in Julius Baer Zurich Custody</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <span class="metric-label">Cost Overrun Exposure</span>
+                  <div class="metric-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                </div>
+                <div class="metric-val">$0.00</div>
+                <div class="metric-sub" style="color: #00E676;">100% Insulated by Stackly GMP Bond</div>
+              </div>
+            </div>
+
+            <!-- SECTION 3 OF ESCROW & DISBURSEMENTS: COST BREAKDOWN & CUSTODIAL GUARANTEES -->
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Transparent Discipline Cost Allocation</h2>
+                  <span class="step-status-tag tag-completed">QS Verified</span>
+                </div>
+
+                <div class="milestone-stepper">
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-mountain"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Structural Engineering, Granite Excavation &amp; Concrete ($2.95M)</span>
+                        <span class="step-status-tag tag-completed">100% Settled</span>
+                      </div>
+                      <p class="step-desc">Includes deep alpine rock anchoring, post-tensioned cantilever slabs, and subterranean spa vault waterproofing.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item completed">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-cubes"></i></div>
+                      <div class="step-connecting-line"></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Pietrasanta Stone Quarry Lots &amp; Swiss Thermal Glazing ($1.90M)</span>
+                        <span class="step-status-tag tag-completed">100% Settled</span>
+                      </div>
+                      <p class="step-desc">Direct factory-to-site procurement with zero third-party distributor markups; all customs duties settled.</p>
+                    </div>
+                  </div>
+
+                  <div class="milestone-step-item active">
+                    <div class="step-node-col">
+                      <div class="step-circle"><i class="fas fa-couch"></i></div>
+                    </div>
+                    <div class="step-details">
+                      <div class="step-header-row">
+                        <span class="step-name">Artisanal Joinery, Bespoke FF&amp;E &amp; Smart Automation ($2.25M)</span>
+                        <span class="step-status-tag tag-active">Releases Feb 2027</span>
+                      </div>
+                      <p class="step-desc">Held in ring-fenced escrow until final patron walkthrough, acoustic commissioning, and white-glove key handover.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Swiss Custodial Escrow &amp; Tax Documentation</h2>
+                </div>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Julius Baer Private Bank (Account #CH93-0048-8821):</strong> Fiduciary escrow agreement guarantees funds are released strictly upon RICS Quantity Surveyor sign-off.
+                      <span class="activity-time">Custodian Verified &bull; Zurich Paradeplatz</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Swiss Minergie-P Green Tax Rebate Certificate:</strong> Villa Aurelia qualifies for cantonal sustainable energy capital allowances due to zero-emission geothermal loops.
+                      <span class="activity-time">Filed with Graubünden Tax Authority &bull; Oct 2026</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong> sovereign Builder’s All-Risk Insurance (Lloyd’s of London):</strong> $10,000,000 comprehensive structural and fine-art material transit policy active through handover.
+                      <span class="activity-time">Policy #LL-90418-CH &bull; Active</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                  <span>Download Annual Family Office Tax &amp; Audit Dossier</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- CLIENT TAB 5: DIRECT PRINCIPAL CONCIERGE -->
+          <section class="tab-pane" id="tab-client-concierge">
+            <div class="dash-view-header">
+              <span class="dash-pre-title">&mdash; PRIVATE PATRON COMMUNICATIONS</span>
+              <h1 class="dash-view-title">Direct Principal Concierge &amp; Site Expeditions</h1>
+            </div>
+
+            <div class="dash-two-col">
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">Transmit Private Note to Your Lead Principal</h2>
+                </div>
+                <form onsubmit="event.preventDefault(); window.location.href='404.html';">
+                  <div style="margin-bottom: 1.25rem;">
+                    <label style="display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--dash-text-muted);margin-bottom:0.5rem;">Recipient Principal</label>
+                    <select class="project-select-input" style="width:100%;background:#0D0F11;border:1px solid var(--dash-border);padding:0.85rem;border-radius:8px;">
+                      <option>Elena Rostova — Founding Principal &amp; Lead Architect</option>
+                      <option>Kaelen Vance — Founding Principal</option>
+                      <option>Sophia Chen — Creative Director, Interior Styling</option>
+                      <option>Marcus Vance — Partner, Structural Innovation</option>
+                    </select>
+                  </div>
+                  <div style="margin-bottom: 1.25rem;">
+                    <label style="display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--dash-text-muted);margin-bottom:0.5rem;">Subject / Architectural Element</label>
+                    <input type="text" required placeholder="e.g. Private Wine Vault Humidity &amp; Lighting" style="width:100%;background:#0D0F11;border:1px solid var(--dash-border);padding:0.85rem;border-radius:8px;color:#fff;box-sizing:border-box;">
+                  </div>
+                  <div style="margin-bottom: 1.25rem;">
+                    <label style="display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--dash-text-muted);margin-bottom:0.5rem;">Encrypted Message</label>
+                    <textarea rows="4" required placeholder="Enter your bespoke modification request or site visit inquiry..." style="width:100%;background:#0D0F11;border:1px solid var(--dash-border);padding:0.85rem;border-radius:8px;color:#fff;box-sizing:border-box;font-family:inherit;"></textarea>
+                  </div>
+                  <button type="submit" class="btn-dash-action" style="padding: 0.85rem 1.5rem;">
+                    <i class="fas fa-lock"></i>
+                    <span>Transmit Encrypted Dispatch</span>
+                  </button>
+                </form>
+              </div>
+
+              <div class="dash-panel-card">
+                <div class="panel-header">
+                  <h2 class="panel-title">VIP Site Inspection &amp; Helicopter Transfer</h2>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--dash-text-body); line-height: 1.6; margin-bottom: 1.5rem;">
+                  Coordinate a private on-site walkthrough with your Lead Principal. Complimentary helicopter transfer is arranged from Zurich Airport (ZRH) or Samedan Engadin Airport (SMV) directly to the St. Moritz site pad.
+                </p>
+                <div class="activity-list" style="margin-bottom: 1.5rem;">
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Dedicated Concierge Line:</strong> +41 44 580 29 00 (Zurich HQ)
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="activity-text">
+                      <strong>Next Scheduled Site Walkthrough:</strong> November 18, 2026 at 11:00 CET
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="dash-action-btn-sm" style="padding: 0.7rem 1.2rem;" onclick="window.location.href='404.html'">
+                  <i class="fas fa-helicopter"></i>
+                  <span>Request Helicopter Site Inspection</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- SECTION 2 OF PRINCIPAL CONCIERGE: DEDICATED ATELIER LEADERSHIP TEAM FOR YOUR ESTATE -->
+            <div class="materials-grid" style="margin-top: 1.75rem; margin-bottom: 1.75rem;">
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/team-elena.webp" alt="Elena Rostova Lead Principal">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">FOUNDING PRINCIPAL &bull; LEAD ARCHITECT</div>
+                  <h3 class="material-name">Elena Rostova</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Directs overall spatial conception, alpine massing, and weekly on-site supervision in St. Moritz.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-video"></i> Private Briefing
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/team-marcus.webp" alt="Marcus Vance Structural Partner">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">PARTNER &bull; STRUCTURAL INNOVATION</div>
+                  <h3 class="material-name">Marcus Vance</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Oversees the 40-foot post-tensioned cantilever engineering, seismic resilience, and geothermal loops.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-video"></i> Private Briefing
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/team-sophia.webp" alt="Sophia Chen Interior Director">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">CREATIVE DIRECTOR &bull; INTERIORS</div>
+                  <h3 class="material-name">Sophia Chen</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Curates your Pietrasanta stone selection, custom Milanese bronze hardware, and circadian lighting.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-video"></i> Private Briefing
+                  </button>
+                </div>
+              </div>
+
+              <div class="material-card">
+                <div class="material-img-wrap">
+                  <img src="assets/team-julian.webp" alt="Julian Mercer Landscape Director">
+                </div>
+                <div class="material-body">
+                  <div class="material-provenance">DIRECTOR &bull; ALPINE ECOLOGY</div>
+                  <h3 class="material-name">Julian Mercer</h3>
+                  <p class="material-desc" style="margin-bottom: 0.85rem;">Leads zero-edge thermal reflection pools, native alpine pine terracing, and snow-melt hardscapes.</p>
+                  <button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'">
+                    <i class="fas fa-video"></i> Private Briefing
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 3 OF PRINCIPAL CONCIERGE: UPCOMING PATRON SITE EXPEDITION & AVIATION ITINERARY -->
+            <div class="dash-panel-card" style="overflow-x: auto;">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Scheduled Patron Site Walkthroughs &amp; Aviation Protocol</h2>
+                  <span style="font-size: 0.8rem; color: var(--dash-text-muted);">Bespoke flight logistics, private hospitality, and on-site milestone inspections coordinated by our Zurich Concierge.</span>
+                </div>
+                <button type="button" class="btn-dash-action" onclick="window.location.href='404.html'">
+                  <i class="fas fa-calendar-plus"></i>
+                  <span>Schedule New Expedition</span>
+                </button>
+              </div>
+
+              <table class="financial-table">
+                <thead>
+                  <tr>
+                    <th>Expedition Date</th>
+                    <th>Aviation &amp; Transfer Protocol</th>
+                    <th>On-Site Architectural Agenda</th>
+                    <th>Hosting Principal</th>
+                    <th>Concierge Status</th>
+                    <th>Itinerary Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color:#fff;">Nov 18, 2026</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">11:00 — 16:30 CET</span></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">AgustaWestland AW139 Helicopter</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Samedan (SMV) to Villa Aurelia Private Pad</span>
+                    </td>
+                    <td>Atrium Travertine Mockup &amp; Cantilever Sunset Viewing</td>
+                    <td>Elena Rostova</td>
+                    <td><span class="step-status-tag tag-completed"><i class="fas fa-check-circle"></i> Flight Plan Filed</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-plane"></i> Flight Pass</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">Dec 09, 2026</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">14:00 — 18:00 CET</span></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Chauffeured Maybach Alpine Transfer</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Badrutt’s Palace to Zurich Atelier Vault</span>
+                    </td>
+                    <td>Final Wine Vault Joinery &amp; Circadian Lighting Sign-Off</td>
+                    <td>Sophia Chen</td>
+                    <td><span class="step-status-tag tag-active"><i class="fas fa-clock"></i> Reserved</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-edit"></i> Modify</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color:#fff;">Jan 22, 2027</strong><br><span style="font-size:0.75rem;color:var(--dash-text-muted);">10:30 — 15:00 CET</span></td>
+                    <td>
+                      <strong style="color:#fff;display:block;">Private Jet &amp; Quarry Transfer</strong>
+                      <span style="font-size:0.75rem;color:var(--dash-text-muted);">Zurich (ZRH) to Forte dei Marmi / Pietrasanta</span>
+                    </td>
+                    <td>Personal Selection of Master Suite Monolithic Marble Block</td>
+                    <td>Elena Rostova &amp; S. Chen</td>
+                    <td><span class="step-status-tag tag-scheduled"><i class="fas fa-compass"></i> Invitational</span></td>
+                    <td><button type="button" class="dash-action-btn-sm" onclick="window.location.href='404.html'"><i class="fas fa-check"></i> Confirm RSVP</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Fullscreen Blueprint Inspection Modal -->
+  <div class="blueprint-modal" id="blueprintModal">
+    <div class="modal-content-wrap">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalBlueprintTitle">Architectural Sheet Preview</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/blueprint-cantilever.webp" alt="Blueprint Full Preview" id="modalBlueprintImg">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

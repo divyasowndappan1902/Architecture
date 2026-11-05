@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gazette &amp; Architectural Journal — ARCHITECTURE PRIME</title>
+  <meta name="description" content="Explore theoretical essays, structural case studies, materiality trends, and interior insights from Architecture Prime's research fellows.">
+  
+  <link rel="icon" type="image/webp" href="assets/logo_0064.webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Architectural Page Preloader -->
+  <div class="site-preloader" id="pagePreloader" aria-hidden="true">
+    <div class="preloader-grid-lines">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="preloader-inner">
+      <div class="preloader-brand-wrap">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="preloader-logo">
+      </div>
+      <div class="preloader-tagline">STACKLY ATELIER &bull; SPATIAL ENGINEERING</div>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-meta">
+        <span class="preloader-status">CALIBRATING SPATIAL GEOMETRY</span>
+        <span class="preloader-counter" id="preloaderCounter">00%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="Stackly Architecture">
+        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+      </a>
+
+      <nav class="nav-menu-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="btn-header-login">
+          <i class="fas fa-user-shield"></i>
+          <span>Client Portal</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span><span class="link-index">01</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span><span class="link-index">02</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span><span class="link-index">03</span></a>
+      <a href="blog.html" class="mobile-nav-link active"><span>Blog</span><span class="link-index">04</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span><span class="link-index">05</span></a>
+      <a href="login.html" class="mobile-nav-link"><span>Client Login</span><span class="link-index">06</span></a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-contact-item"><i class="fas fa-phone-alt"></i> +1 (800) 492-8820</div>
+      <div class="mobile-contact-item"><i class="fas fa-envelope"></i> concierge@architectureprime.com</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================================================================
+         BLOG SECTION 1: HERO
+         =================================================================== -->
+    <section class="page-hero-section" id="blogHero">
+      <img src="assets/blog-brutalism.webp" 
+           alt="Architecture Prime Gazette Hero" class="page-hero-bg">
+      <div class="page-hero-overlay"></div>
+      
+      <div class="container">
+        <div class="page-hero-content" data-aos="fade-up">
+          <div class="section-badge badge-dark">Gazette &amp; Monograph</div>
+          <h1 class="page-hero-title">Architectural Discourse &amp; <span class="font-serif">Critical Thought</span></h1>
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Gazette</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 2: FEATURED ARTICLE
+         =================================================================== -->
+    <section class="featured-article-section" id="featuredArticle">
+      <div class="container">
+        <div class="featured-article-card" data-aos="fade-up">
+          <img src="assets/project-valhalla-ridge.webp" 
+               alt="The Alpine Monolith Architecture" class="featured-article-img">
+          
+          <div class="featured-article-content">
+            <span class="blog-category">Lead Editorial &bull; 8 Min Read</span>
+            <h2 class="section-title" style="font-size: 2.1rem; margin-top: 0.5rem;">The Alpine Monolith: Thermal Mass &amp; Brutalist Topography in High-Altitude Residences</h2>
+            <p class="section-desc" style="font-size: 1rem; margin-bottom: 2rem;">
+              An exhaustive architectural analysis of building with poured obsidian concrete on 45-degree rock inclines. How geothermal floor reservoirs and triple-glazed curtain walls preserve net-zero interior stability through sub-zero alpine winters.
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <span style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">By Elena Rostova</span>
+              <span style="color: var(--color-text-light); font-size: 0.85rem;">&bull; October 30, 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 3: LATEST ARTICLES
+         =================================================================== -->
+    <section class="services-section" id="latestArticles">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Recent Dispatches</div>
+          <h2 class="section-title">Latest Articles From <span class="font-serif">The Atelier Desk</span></h2>
+          <p class="section-desc">
+            Perspectives on materials, daylight modulation, and structural engineering published bi-weekly.
+          </p>
+        </div>
+
+        <div class="latest-blogs-grid">
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-travertine.webp" alt="Tactile Stone Finishes">
+              <span class="blog-badge-date">Oct 24, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Materiality</span>
+              <h3 class="blog-card-title">Bush-Hammered Travertine: The Resurgence of Ancient Texture</h3>
+              <p class="blog-card-snippet">
+                Why modern patrons are moving away from polished marble in favor of deeply tactile stone that catches low-angle raking sunlight.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-acoustics.webp" alt="Spatial Acoustics">
+              <span class="blog-badge-date">Oct 19, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Interior Acoustics</span>
+              <h3 class="blog-card-title">Acoustic Choreography: Absorbing Echoes in 18-Foot Atriums</h3>
+              <p class="blog-card-snippet">
+                Techniques for hiding resonant helmholtz sound absorbers behind fabric walls and slatted white oak ceilings.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card-img-wrap">
+              <img src="assets/project-solis-oasis.webp" alt="Desert Modernism">
+              <span class="blog-badge-date">Oct 12, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Climatic Design</span>
+              <h3 class="blog-card-title">Deep Overhangs &amp; Thermal Inertia in Arid Desert Sanctuaries</h3>
+              <p class="blog-card-snippet">
+                Harnessing rammed earth walls and deep cantilevers to naturally reduce interior temperatures by 25°F without artificial chilling.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card-img-wrap">
+              <img src="assets/hero-villa.webp" alt="Subterranean Light Architecture">
+              <span class="blog-badge-date">Oct 05, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Biophilic Engineering</span>
+              <h3 class="blog-card-title">Subterranean Light Cannons: Channeling Zenith Sun to Spas</h3>
+              <p class="blog-card-snippet">
+                Sculpting parabolic concrete light-scoops and mirror-polished bronze baffles to illuminate subterranean spa sanctuaries with natural daylight.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card-img-wrap">
+              <img src="assets/blog-charred-cedar.webp" alt="Charred Cedar Facade">
+              <span class="blog-badge-date">Sep 28, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Tectonic Joinery</span>
+              <h3 class="blog-card-title">Monolithic Charred Cedar: Shou Sugi Ban in Alpine Climes</h3>
+              <p class="blog-card-snippet">
+                The ancient Japanese preservation technique of yakisugi applied to high-elevation Swiss chalets for fireproof, pest-resistant timber fa&ccedil;ades.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card-img-wrap">
+              <img src="assets/interior-detail.webp" alt="Reflective Water Terraces">
+              <span class="blog-badge-date">Sep 20, 2026</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-category">Regenerative Craft</span>
+              <h3 class="blog-card-title">Water Choreography: Reflective Ponds as Microclimate Regulators</h3>
+              <p class="blog-card-snippet">
+                Designing precision zero-edge limestone reflecting pools that naturally cool prevailing summer breezes and bounce kinetic ripple light onto raw ceilings.
+              </p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 4: ARCHITECTURE TRENDS
+         =================================================================== -->
+    <section class="story-section" id="architectureTrends">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Structural Foresight</div>
+          <h2 class="section-title">Global Architecture Trends <span class="font-serif">For 2026 &amp; Beyond</span></h2>
+        </div>
+
+        <div class="mission-vision-grid">
+          <div class="mv-card" data-aos="fade-right">
+            <div class="mv-icon"><i class="fas fa-cubes"></i></div>
+            <h3 class="section-title">01. Mass Timber Structural Grids</h3>
+            <p>
+              Cross-laminated timber (CLT) is replacing structural steel in luxury residences. Aside from carbon sequestration, exposed mass timber creates an innate psychological sensation of biological warmth and tactile safety impossible with cold metal.
+            </p>
+          </div>
+
+          <div class="mv-card" data-aos="fade-left">
+            <div class="mv-icon"><i class="fas fa-sun"></i></div>
+            <h3 class="section-title">02. Kinetic Solar Louver Façades</h3>
+            <p>
+              Automated bronze and aluminum louvers that track the sun's azimuth angle continuously. They minimize peak solar gain during midday while automatically retracting at dusk to reveal unobstructed panoramic sunset views.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 5: INTERIOR DESIGN INSIGHTS
+         =================================================================== -->
+    <section class="services-section" id="interiorInsights" style="background-color: var(--color-background);">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Spatial Nuance</div>
+          <h2 class="section-title">Interior Design <span class="font-serif">Insights &amp; Rituals</span></h2>
+        </div>
+
+        <div class="mission-vision-grid">
+          <div class="mv-card" data-aos="fade-right">
+            <div class="mv-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3 class="section-title">Circadian Lighting Architectures</h3>
+            <p>
+              Eliminating harsh direct overhead downlights. We integrate concealed micro-apertures that shift warmth from 4500K crisp white morning sunlight to deep amber 2200K firelight as twilight approaches, regulating melatonin and deep sleep.
+            </p>
+          </div>
+
+          <div class="mv-card" data-aos="fade-left">
+            <div class="mv-icon"><i class="fas fa-water"></i></div>
+            <h3 class="section-title">Integrated Reflective Water Courtyards</h3>
+            <p>
+              Interior light-wells featuring shallow dark basalt reflection pools. Water ripples project dancing kinetic caustic reflections onto double-height concrete ceilings, bringing animated life to otherwise static minimalist walls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 6: POPULAR ARTICLES
+         =================================================================== -->
+    <section class="story-section" id="popularArticles">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-badge">Archival Classics</div>
+          <h2 class="section-title">Most Read Essays <span class="font-serif">Across Our Readership</span></h2>
+        </div>
+
+        <div class="latest-blogs-grid">
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card-body">
+              <span class="blog-category">Archival &bull; 14K Reads</span>
+              <h3 class="blog-card-title">How To Design Zero-Edge Swimming Pools That Disappear Into Sea Horizons</h3>
+              <p class="blog-card-snippet">The engineering tolerances required for 60-foot perimeter weir overflow troughs.</p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card-body">
+              <span class="blog-category">Archival &bull; 19K Reads</span>
+              <h3 class="blog-card-title">The Monolithic Kitchen: Concealing Culinary Appliances Behind Stone Sliders</h3>
+              <p class="blog-card-snippet">Turning open-concept kitchens into quiet sculpture when cooking is concluded.</p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card-body">
+              <span class="blog-category">Archival &bull; 23K Reads</span>
+              <h3 class="blog-card-title">Cantilevering Over Chasms: Post-Tensioned Concrete Engineering Demystified</h3>
+              <p class="blog-card-snippet">How internal high-strength steel tendons allow 40-foot unsupported living room overhangs.</p>
+              <a href="404.html" class="blog-read-more"><span>Read Essay</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 7: NEWSLETTER
+         =================================================================== -->
+    <section class="newsletter-page-section" id="newsletterSection">
+      <div class="container">
+        <div class="newsletter-box" data-aos="fade-up">
+          <div class="section-badge badge-dark">The Gazette Edition</div>
+          <h2>Join the Circle of <span class="font-serif">Architectural Patrons</span></h2>
+          <p>
+            Delivered quarterly in both high-grade digital print and private monograph hardcovers for verified patrons and design fellows.
+          </p>
+
+          <form class="newsletter-form" style="max-width: 520px; margin: 0 auto;">
+            <div class="newsletter-form-inline">
+              <input type="email" placeholder="Enter your executive email..." required aria-label="Newsletter Email">
+              <button type="submit" aria-label="Subscribe to Gazette">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         BLOG SECTION 8: FOOTER
+         =================================================================== -->
+    <footer class="site-footer" id="blogFooter">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-col-about">
+            <a href="index.html" class="site-logo" aria-label="Stackly Architecture" style="margin-bottom: 1.5rem;">
+              <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
+            </a>
+            <p class="footer-about-text">
+              Sculptural architecture, parametric engineering, and bespoke luxury interior environments crafted with absolute structural fidelity.
+            </p>
+            <div class="footer-social-row">
+              <a href="404.html" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="404.html" class="social-circle" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="404.html" class="social-circle" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="404.html" class="social-circle" aria-label="Houzz"><i class="fab fa-houzz"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">Client Portal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Disciplines</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html">Residential Villas</a></li>
+              <li><a href="services.html">Commercial Landmarks</a></li>
+              <li><a href="services.html">Spatial Interiors</a></li>
+              <li><a href="services.html">Historic Restoration</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Direct Office</h4>
+            <p class="footer-newsletter-text">
+              <i class="fas fa-map-marker-alt" style="color: var(--color-accent-secondary); width: 18px;"></i> MMR Complex, chinna tirupathi,<br>
+              <span style="display: inline-block; padding-left: 22px;">Salem, Tamil Nadu, IN 636008.</span><br>
+              <i class="fas fa-phone-alt" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> +91 9876543210<br>
+              <i class="fas fa-envelope" style="color: var(--color-accent-secondary); width: 18px; margin-top: 0.4rem;"></i> info@stackly.com
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 Stackly Architecture Inc. All Rights Reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy Framework</a>
+            <a href="404.html">Terms of Engagement</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
