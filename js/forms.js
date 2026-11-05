@@ -29,6 +29,7 @@ function initNavbarScroll() {
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const overlay = document.querySelector('.mobile-nav-overlay');
+  const closeBtn = document.querySelector('.mobile-nav-close');
   const links = document.querySelectorAll('.mobile-nav-link');
 
   if (!toggleBtn || !overlay) return;
@@ -37,6 +38,7 @@ function initMobileMenu() {
     toggleBtn.classList.toggle('active');
     overlay.classList.toggle('open');
     const isOpen = overlay.classList.contains('open');
+    document.documentElement.style.overflow = isOpen ? 'hidden' : '';
     document.body.style.overflow = isOpen ? 'hidden' : '';
     const icon = toggleBtn.querySelector('i');
     if (icon) {
@@ -46,6 +48,14 @@ function initMobileMenu() {
   }
 
   toggleBtn.addEventListener('click', toggleMenu);
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      if (overlay.classList.contains('open')) {
+        toggleMenu();
+      }
+    });
+  }
 
   links.forEach((l) => {
     l.addEventListener('click', () => {

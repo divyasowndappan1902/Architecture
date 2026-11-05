@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initUserSession();
   initRoleSlotSwitcher();
   initNavTabs();
+  initResponsiveTables();
   initProjectSelector();
   initAdminDirectorateSelector();
   initBlueprintModal();
@@ -201,9 +202,31 @@ function initNavTabs() {
 
       // Close mobile sidebar on selection
       const sidebar = document.getElementById('dashboardSidebar');
+      const backdrop = document.getElementById('sidebarBackdrop');
       if (sidebar && window.innerWidth <= 1024) {
         sidebar.classList.remove('open');
+        if (backdrop) backdrop.classList.remove('active');
+        document.body.style.overflow = '';
       }
+    });
+  });
+}
+
+/* -------------------------------------------------------------
+   3B. RESPONSIVE TABLE DATA-LABELS FOR 320PX+ MOBILE STACKING
+   ------------------------------------------------------------- */
+function initResponsiveTables() {
+  const tables = document.querySelectorAll('.financial-table');
+  tables.forEach(table => {
+    const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach(row => {
+      const cells = row.querySelectorAll('td');
+      cells.forEach((td, idx) => {
+        if (headers[idx] && !td.hasAttribute('data-label')) {
+          td.setAttribute('data-label', headers[idx]);
+        }
+      });
     });
   });
 }
@@ -382,17 +405,34 @@ function initMobileSidebar() {
   const toggleBtn = document.getElementById('mobileSidebarToggle');
   const sidebar = document.getElementById('dashboardSidebar');
   const closeBtn = document.getElementById('sidebarCloseBtn');
+  const backdrop = document.getElementById('sidebarBackdrop');
+
+  function openSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.add('open');
+    if (backdrop) backdrop.classList.add('active');
+    if (window.innerWidth <= 1024) {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
   if (toggleBtn && sidebar) {
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.add('open');
-    });
+    toggleBtn.addEventListener('click', openSidebar);
   }
 
   if (closeBtn && sidebar) {
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-    });
+    closeBtn.addEventListener('click', closeSidebar);
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeSidebar);
   }
 
   const logoutBtn = document.getElementById('logoutBtn');
@@ -409,10 +449,10 @@ function showToast(msg) {
   if (!toast) {
     toast = document.createElement('div');
     toast.className = 'auth-toast';
-    toast.style.cssText = 'position:fixed;bottom:2rem;right:2rem;padding:1rem 1.5rem;background:#16181B;border-left:4px solid #B84A65;box-shadow:0 10px 30px rgba(0,0,0,0.6);color:#fff;border-radius:6px;z-index:9999;font-size:0.88rem;transition:transform 0.35s ease, opacity 0.35s ease;transform:translateY(120%);opacity:0;';
+    toast.style.cssText = 'position:fixed;bottom:1.25rem;right:1rem;left:auto;max-width:calc(100vw - 2rem);padding:0.85rem 1.15rem;background:#16181B;border-left:4px solid #B84A65;box-shadow:0 10px 30px rgba(0,0,0,0.6);color:#fff;border-radius:6px;z-index:9999;font-size:0.82rem;line-height:1.4;box-sizing:border-box;transition:transform 0.35s ease, opacity 0.35s ease;transform:translateY(120%);opacity:0;';
     document.body.appendChild(toast);
   }
-  toast.innerHTML = `<i class="fas fa-check-circle" style="color: #B84A65; margin-right: 0.5rem;"></i> ${msg}`;
+  toast.innerHTML = `<i class="fas fa-check-circle" style="color: #B84A65; margin-right: 0.45rem;"></i> ${msg}`;
   toast.style.transform = 'translateY(0)';
   toast.style.opacity = '1';
 

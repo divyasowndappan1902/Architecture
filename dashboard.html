@@ -38,37 +38,6 @@
           </button>
         </div>
 
-        <!-- UNIQUE & EXCELLENT ARCHITECTURAL ROLE SELECTION SLOT -->
-        <div class="sidebar-role-slot" role="region" aria-label="Dashboard Role Selection Slot">
-          <div class="sidebar-role-slot-top">
-            <span class="sidebar-role-slot-label">
-              <i class="fas fa-sliders-h"></i>
-              <span>Active Command Slot</span>
-            </span>
-            <span class="sidebar-role-clearance-pill" id="sidebarClearancePill">TIER 01 MASTER</span>
-          </div>
-
-          <div class="sidebar-role-slot-grid">
-            <button type="button" class="role-slot-option active" data-switch-role="admin" id="sidebarSlotAdmin">
-              <div class="role-slot-option-head">
-                <i class="fas fa-user-shield"></i>
-                <span class="role-slot-dot"><i class="fas fa-circle"></i></span>
-              </div>
-              <span class="role-slot-title">Admin</span>
-              <span class="role-slot-sub">Studio Governance</span>
-            </button>
-
-            <button type="button" class="role-slot-option" data-switch-role="client" id="sidebarSlotClient">
-              <div class="role-slot-option-head">
-                <i class="fas fa-gem"></i>
-                <span class="role-slot-dot"><i class="fas fa-circle"></i></span>
-              </div>
-              <span class="role-slot-title">Client</span>
-              <span class="role-slot-sub">Patron Suite</span>
-            </button>
-          </div>
-        </div>
-
         <!-- ADMIN NAVIGATION MODULES -->
         <ul class="dashboard-nav-list" id="adminNavList">
           <li>
@@ -159,6 +128,9 @@
         </div>
       </div>
     </aside>
+
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
     <!-- ===================================================================
          MAIN VIEWPORT
