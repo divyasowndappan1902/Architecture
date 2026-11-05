@@ -20,31 +20,128 @@
       min-height: 100vh;
       background-color: #0E1011;
       background-image:
-        radial-gradient(circle at 20% 25%, rgba(139, 38, 62, 0.22) 0%, transparent 50%),
-        radial-gradient(circle at 80% 75%, rgba(184, 74, 101, 0.14) 0%, transparent 50%),
-        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        radial-gradient(circle at 20% 25%, rgba(139, 38, 62, 0.26) 0%, transparent 50%),
+        radial-gradient(circle at 80% 75%, rgba(255, 179, 200, 0.14) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+      animation: blueprintGridDrift 18s linear infinite;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8rem 1.5rem 5rem;
+      padding: 3rem 1.5rem;
       position: relative;
       overflow: hidden;
       color: #FFFFFF;
+      perspective: 1200px;
+    }
+
+    @keyframes blueprintGridDrift {
+      0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+      }
+      100% {
+        background-position: 0 0, 0 0, 64px 64px, 64px 64px;
+      }
+    }
+
+    /* Ambient Rotating Architectural Rings & Laser Scanline */
+    .error-bg-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 179, 200, 0.16);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .error-bg-ring.ring-1 {
+      width: 680px;
+      height: 680px;
+      animation: spinRing 36s linear infinite;
+    }
+
+    .error-bg-ring.ring-2 {
+      width: 920px;
+      height: 920px;
+      border-style: solid;
+      border-color: rgba(184, 74, 101, 0.09);
+      animation: spinRingReverse 52s linear infinite;
+    }
+
+    .error-scanline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 179, 200, 0.55) 50%, transparent 100%);
+      box-shadow: 0 0 20px rgba(255, 179, 200, 0.45);
+      pointer-events: none;
+      z-index: 1;
+      animation: blueprintScan 6s ease-in-out infinite;
+    }
+
+    @keyframes spinRing {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spinRingReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    @keyframes blueprintScan {
+      0%, 100% { top: 8%; opacity: 0.2; }
+      50% { top: 92%; opacity: 0.75; }
     }
 
     .error-404-card {
       max-width: 760px;
       width: 100%;
-      background: rgba(24, 27, 30, 0.85);
-      border: 1px solid rgba(184, 74, 101, 0.32);
+      background: rgba(20, 23, 26, 0.86);
+      border: 1px solid rgba(255, 179, 200, 0.32);
       border-radius: 16px;
       padding: 4rem 3rem;
       text-align: center;
       backdrop-filter: blur(18px);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65), inset 0 0 40px rgba(139, 38, 62, 0.12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65), inset 0 0 40px rgba(139, 38, 62, 0.16);
       position: relative;
+      z-index: 2;
+      transform-style: preserve-3d;
+      animation: cardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes cardEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Architectural Corner Brackets */
+    .corner-bracket {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #FFB3C8;
+      border-style: solid;
+      opacity: 0.65;
+      pointer-events: none;
+      animation: bracketPulse 3s ease-in-out infinite;
+    }
+
+    .corner-bracket.tl { top: 14px; left: 14px; border-width: 2px 0 0 2px; }
+    .corner-bracket.tr { top: 14px; right: 14px; border-width: 2px 2px 0 0; }
+    .corner-bracket.bl { bottom: 14px; left: 14px; border-width: 0 0 2px 2px; }
+    .corner-bracket.br { bottom: 14px; right: 14px; border-width: 0 2px 2px 0; }
+
+    @keyframes bracketPulse {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.95; transform: scale(1.08); }
     }
 
     .error-404-badge {
@@ -53,14 +150,24 @@
       gap: 0.6rem;
       padding: 0.45rem 1.15rem;
       border-radius: 50px;
-      background: rgba(184, 74, 101, 0.14);
-      border: 1px solid rgba(184, 74, 101, 0.38);
-      color: #B84A65;
+      background: rgba(255, 179, 200, 0.14);
+      border: 1px solid rgba(255, 179, 200, 0.45);
+      color: #FFB3C8;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
+      box-shadow: 0 0 20px rgba(255, 179, 200, 0.15);
+    }
+
+    .error-404-badge i {
+      animation: compassSwing 3.2s ease-in-out infinite;
+    }
+
+    @keyframes compassSwing {
+      0%, 100% { transform: rotate(-12deg); }
+      50% { transform: rotate(18deg) scale(1.1); }
     }
 
     .error-404-code {
@@ -69,10 +176,39 @@
       font-weight: 700;
       line-height: 0.92;
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #FFFFFF 0%, #D98A9C 55%, #8B263E 100%);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+
+    .error-404-code .digit {
+      display: inline-block;
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFB3C8 45%, #B84A65 80%, #FFFFFF 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
+      animation: digitFloat 3.6s ease-in-out infinite, gradientShimmer 5s linear infinite;
+      filter: drop-shadow(0 12px 28px rgba(184, 74, 101, 0.35));
+    }
+
+    .error-404-code .digit:nth-child(2) {
+      animation-delay: 0.25s, 0s;
+    }
+
+    .error-404-code .digit:nth-child(3) {
+      animation-delay: 0.5s, 0s;
+    }
+
+    @keyframes digitFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes gradientShimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
     }
 
     .error-404-title {
@@ -114,7 +250,22 @@
     }
 
     .error-404-meta i {
-      color: #B84A65;
+      color: #FFB3C8;
+    }
+
+    .status-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #FFB3C8;
+      box-shadow: 0 0 10px #FFB3C8;
+      display: inline-block;
+      animation: pulseRadar 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulseRadar {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.45); opacity: 0.45; }
     }
 
     .error-404-actions {
@@ -127,7 +278,7 @@
 
     @media (max-width: 576px) {
       .error-404-card {
-        padding: 2.75rem 1.5rem;
+        padding: 2.75rem 1.25rem;
       }
       .error-404-actions {
         flex-direction: column;
@@ -144,69 +295,43 @@
   <div class="custom-cursor"></div>
   <div class="custom-cursor-dot"></div>
 
-  <!-- STICKY NAVBAR -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      <a href="index.html" class="site-logo" aria-label="Stackly Architecture">
-        <img src="assets/logo_0064.webp" alt="Stackly Architecture" class="site-logo-img">
-      </a>
-
-      <nav class="nav-menu-desktop">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="login.html" class="btn-header-login">
-          <i class="fas fa-user-shield"></i>
-          <span>Client Portal</span>
-        </a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Fullscreen Navigation Overlay -->
-  <div class="mobile-nav-overlay" id="mobileOverlay">
-    <div class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link"><span>Home</span><span class="link-index">01</span></a>
-      <a href="about.html" class="mobile-nav-link"><span>About</span><span class="link-index">02</span></a>
-      <a href="services.html" class="mobile-nav-link"><span>Services</span><span class="link-index">03</span></a>
-      <a href="blog.html" class="mobile-nav-link"><span>Blog</span><span class="link-index">04</span></a>
-      <a href="contact.html" class="mobile-nav-link"><span>Contact</span><span class="link-index">05</span></a>
-      <a href="login.html" class="mobile-nav-link"><span>Client Login</span><span class="link-index">06</span></a>
-    </div>
-  </div>
-
   <!-- 404 ARCHITECTURAL VIEWPORT -->
   <main>
-    <section class="error-404-section">
-      <div class="error-404-card">
-        <div class="error-404-badge">
+    <section class="error-404-section" id="error404Section">
+      <!-- Animated Blueprint Rings & Laser Scanline -->
+      <div class="error-bg-ring ring-1"></div>
+      <div class="error-bg-ring ring-2"></div>
+      <div class="error-scanline"></div>
+
+      <div class="error-404-card" id="error404Card">
+        <span class="corner-bracket tl"></span>
+        <span class="corner-bracket tr"></span>
+        <span class="corner-bracket bl"></span>
+        <span class="corner-bracket br"></span>
+
+        <div class="error-404-badge error-anim-item">
           <i class="fas fa-drafting-compass"></i>
           <span>Architectural Coordinate Not Found</span>
         </div>
 
-        <div class="error-404-code">404</div>
+        <div class="error-404-code error-anim-item" aria-label="404">
+          <span class="digit" data-target="4">4</span>
+          <span class="digit" data-target="0">0</span>
+          <span class="digit" data-target="4">4</span>
+        </div>
 
-        <h1 class="error-404-title">Blueprint Outside Studio Bounds</h1>
+        <h1 class="error-404-title error-anim-item">Blueprint Outside Studio Bounds</h1>
 
-        <p class="error-404-desc">
+        <p class="error-404-desc error-anim-item">
           The architectural dossier, external resource, or telemetry endpoint you requested is either archived under private patron non-disclosure or does not exist at this coordinate.
         </p>
 
-        <div class="error-404-meta">
-          <span><i class="fas fa-shield-alt"></i> Status: 404 Unmapped Sector</span>
+        <div class="error-404-meta error-anim-item">
+          <span><span class="status-pulse-dot"></span> Status: 404 Unmapped Sector</span>
           <span><i class="fas fa-compass"></i> Grid: Stackly Vault v4.2</span>
         </div>
 
-        <div class="error-404-actions">
+        <div class="error-404-actions error-anim-item">
           <a href="index.html" class="btn btn-accent">
             <span>Return to Atelier Home</span>
             <div class="btn-icon-circle"><i class="fas fa-home"></i></div>
@@ -220,7 +345,60 @@
     </section>
   </main>
 
+  <!-- GSAP 3 Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/forms.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const card = document.getElementById('error404Card');
+      const section = document.getElementById('error404Section');
+      const items = document.querySelectorAll('.error-anim-item');
+      const digits = document.querySelectorAll('.error-404-code .digit');
+
+      // GSAP Staggered Entrance & Digit Roll Animation
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo(
+          items,
+          { opacity: 0, y: 28 },
+          { opacity: 1, y: 0, duration: 0.75, stagger: 0.12, ease: 'power3.out', delay: 0.15 }
+        );
+
+        gsap.fromTo(
+          digits,
+          { scale: 0.5, rotationX: -75, opacity: 0 },
+          { scale: 1, rotationX: 0, opacity: 1, duration: 0.9, stagger: 0.14, ease: 'back.out(1.7)', delay: 0.25 }
+        );
+      }
+
+      // Interactive 3D Mouse Parallax Tilt on Desktop
+      if (section && card && window.matchMedia('(pointer: fine)').matches) {
+        section.addEventListener('mousemove', (e) => {
+          const rect = section.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          if (typeof gsap !== 'undefined') {
+            gsap.to(card, {
+              rotationY: x * 8,
+              rotationX: -y * 8,
+              duration: 0.6,
+              ease: 'power2.out'
+            });
+          }
+        });
+
+        section.addEventListener('mouseleave', () => {
+          if (typeof gsap !== 'undefined') {
+            gsap.to(card, {
+              rotationY: 0,
+              rotationX: 0,
+              duration: 0.8,
+              ease: 'elastic.out(1, 0.5)'
+            });
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -87,6 +87,7 @@ body.dashboard-body {
   max-width: 160px;
   object-fit: contain;
   display: block;
+  filter: brightness(1.85) saturate(1.3) drop-shadow(0 0 10px rgba(255, 179, 200, 0.35));
 }
 
 .sidebar-close-btn {
